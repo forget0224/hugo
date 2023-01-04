@@ -1,187 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-      integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-  <body class=" ">
-    <!-- <header class="bg-gray-400" style="height: 100px"> -->
-    <nav class="py-4 bg-gray-400">
-      <div
-        class="container mx-auto flex sm:justify-end items-center sm:items-baseline flex-col sm:flex-row"
-      >
-        <!-- <div class="rounded bg-gray-300" style="width: 120px;height: 50px;"></div> -->
-        <ul class="flex text-ul font-medium">
-          <li class="mr-4">home</li>
-          <li class="mr-4">music</li>
-          <li class="mr-4">video</li>
-          <li class="mr-4">t-shirt</li>
-          <li class="mr-4">contact</li>
-        </ul>
-      </div>
-    </nav>
-    <!-- </header> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- 輪播 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
 
-    <section class="py-10 overflow-hidden">
-      <div class="container mx-auto sm:h-screen h-96 relative">
-        <div class="px-2 absolute sm:top-40 w-full">
-          <div class="flex flex-row -mx-2 ">
-            <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-              <div
-                class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"
-              ></div>
-            </div>
-            <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-              <div
-                class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"
-              ></div>
-            </div>
-            <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-              <div
-                class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"
-              ></div>
-            </div>
-            <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-              <div
-                class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"
-              ></div>
-            </div>
-            <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-              <div
-                class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"
-              ></div>
-            </div>
-            <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-              <div
-                class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"
-              ></div>
-            </div>
+<body class=" ">
+  <!-- <header class="bg-gray-400" style="height: 100px"> -->
+  <nav class="py-4 bg-gray-400">
+    <div class="container mx-auto flex sm:justify-end items-center sm:items-baseline flex-col sm:flex-row">
+      <!-- <div class="rounded bg-gray-300" style="width: 120px;height: 50px;"></div> -->
+      <ul class="flex text-ul font-medium">
+        <li class="mr-4">home</li>
+        <li class="mr-4">music</li>
+        <li class="mr-4">video</li>
+        <li class="mr-4">t-shirt</li>
+        <li class="mr-4">contact</li>
+      </ul>
+    </div>
+  </nav>
+  <!-- </header> -->
+
+  <!-- 輪播 -->
+
+  <section class="py-10 overflow-hidden">
+    <div class="container mx-auto sm:h-screen h-96 relative">
+      <div class="px-2 absolute sm:top-40 w-full">
+        <div class="flex flex-row -mx-2 ">
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+            <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+            <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+            <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+            <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+            <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+            <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- cd -->
-    <section class="py-10 bg-blue-100">
-      <div class="container mx-auto sm:h-screen h-100 max-w-3xl">
-        <h1 class="p-6 text-white text-4xl text-center">DUG OUT</h1>
+  <!-- cd -->
+  <section class="py-10 bg-blue-100">
+    <div class="container mx-auto sm:h-full h-100 max-w-3xl">
+      <h1 class="p-6 text-white text-4xl text-center">DUG OUT</h1>
 
-        <div class="flex flex-col -mx-2">
-          <div class="w-full sm:w-full px-2 flex flex-col items-center">
-            <div
-              class="rounded bg-blue-400 sm:w-full w-full mt-4 sm:h-96 h-56"
-            ></div>
-          </div>
+      <div class="flex flex-col ">
+        <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
+          <div class="rounded bg-blue-400 sm:w-full w-full mt-4 sm:h-96 h-56"></div>
+        </div>
 
-          <div class="w-full sm:w-full px-2 flex flex-col items-center">
-            <div
-              class="rounded bg-blue-400 sm:w-full w-full mt-8 sm:h-56 h-100"
-            >
-              <p class="leading-loose mx-4 mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                fugit dolores ex earum est autem deleniti distinctio odit cum
-                quibusdam numquam debitis labore modi mollitia eos, et itaque
-                pariatur maxime, hic quae. Veritatis nesciunt adipisci
-                architecto ex, eum id quaerat soluta doloremque dolorum quae
-                repudiandae hic aspernatur maiores reiciendis reprehenderit quo
-                ab. Aspernatur eligendi aliquam perspiciatis. Sapiente dicta
-                iste velit quaerat, reprehenderit deleniti odit voluptas.
-                Possimus, nulla eligendi. Iusto, provident.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="w-full sm:w-full px-2 flex flex-row items-center justify-center mt-8"
-          >
-            <div
-              class="rounded bg-blue-400 sm:w-56 w-full mt-4 sm:mx-16 mx-2 sm:h-16 h-16"
-            ></div>
-            <div
-              class="rounded bg-blue-400 sm:w-56 w-full mt-4 sm:mx-16 sm:h-16 mx-2 h-16"
-            ></div>
+        <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
+          <div class="rounded bg-blue-400 sm:w-full w-full mt-8 sm:h-56 h-100">
+            <p class="leading-loose mx-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              fugit dolores ex earum est autem deleniti distinctio odit cum
+              quibusdam numquam debitis labore modi mollitia eos, et itaque
+              pariatur maxime, hic quae. Veritatis nesciunt adipisci
+              architecto ex, eum id quaerat soluta doloremque dolorum quae
+              repudiandae hic aspernatur maiores reiciendis reprehenderit quo
+              ab. Aspernatur eligendi aliquam perspiciatis. Sapiente dicta
+              iste velit quaerat, reprehenderit deleniti odit voluptas.
+              Possimus, nulla eligendi. Iusto, provident.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- mv -->
-    <section class="py-10">
-      <div class="container mx-auto sm:h-screen h-100 max-w-3xl">
-        <h1 class="p-6 text-black text-4xl text-center">DUG OUT MV</h1>
-
-        <div class="flex flex-col -mx-2">
-          <div class="w-full sm:w-full px-2 flex flex-col items-center">
-            <div
-              class="rounded bg-blue-400 sm:w-full w-full mt-4 sm:h-96 h-56"
-            ></div>
-          </div>
-
-          <div class="w-full sm:w-full px-2 flex flex-col items-center">
-            <div
-              class="rounded bg-blue-400 sm:w-full w-full mt-8 sm:h-56 h-100"
-            >
-              <p class="leading-loose mx-4 mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                fugit dolores ex earum est autem deleniti distinctio odit cum
-                quibusdam numquam debitis labore modi mollitia eos, et itaque
-                pariatur maxime, hic quae. Veritatis nesciunt adipisci
-                architecto ex, eum id quaerat soluta doloremque dolorum quae
-                repudiandae hic aspernatur maiores reiciendis reprehenderit quo
-                ab. Aspernatur eligendi aliquam perspiciatis. Sapiente dicta
-                iste velit quaerat, reprehenderit deleniti odit voluptas.
-                Possimus, nulla eligendi. Iusto, provident.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="w-full sm:w-full px-2 flex flex-row items-center justify-center mt-8"
-          >
-            <div
-              class="rounded bg-blue-400 sm:w-56 w-full mt-4 sm:mx-16 mx-2 sm:h-16 h-16"
-            ></div>
-            <div
-              class="rounded bg-blue-400 sm:w-56 w-full mt-4 sm:mx-16 sm:h-16 mx-2 h-16"
-            ></div>
-          </div>
+        <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-8 mx-auto">
+          <div class="rounded bg-blue-400 sm:w-56 w-36 mt-4 sm:mx-16 mx-2 sm:h-16 h-16"></div>
+          <div class="rounded bg-blue-400 sm:w-56 w-36 mt-4 sm:mx-16 sm:h-16 mx-2 h-16"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- t-shirt -->
-    <section class="py-10 bg-blue-100">
-      <div class="container mx-auto sm:h-screen h-100 max-w-3xl"></div>
-    </section>
+  <!-- mv -->
+  <section class="py-10 ">
+    <div class="container mx-auto sm:h-full h-100 max-w-3xl">
+      <h1 class="p-6  text-4xl text-center">DUG OUT MV</h1>
 
-    <!-- contact -->
-    <section class="py-10">
-      <div class="container mx-auto sm:h-screen h-100 max-w-3xl">
-        <h1 class="p-6 text-black text-4xl text-center">contact</h1>
+      <div class="flex flex-col ">
+        <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
+          <div class="rounded bg-blue-400 sm:w-full w-full mt-4 sm:h-96 h-56"></div>
+        </div>
 
-        <div class="w-full sm:w-full px-2 grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-2">
-          <div class="h-16 bg-red-300">1</div>
-          <div class="h-16 bg-red-300">2</div>
-          <div class="h-16 bg-red-300 col-span-2">3</div>
-          <div class="h-16 bg-red-300 col-span-2">4</div>
-          <div class="h-16 bg-red-300">5</div>
-          <div class="h-16 bg-red-300">6</div>
-          <div class="h-16 bg-red-300 col-span-2">7</div>
+        <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
+          <div class="rounded bg-blue-400 sm:w-full w-full mt-8 sm:h-56 h-100">
+            <p class="leading-loose mx-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              fugit dolores ex earum est autem deleniti distinctio odit cum
+              quibusdam numquam debitis labore modi mollitia eos, et itaque
+              pariatur maxime, hic quae. Veritatis nesciunt adipisci
+              architecto ex, eum id quaerat soluta doloremque dolorum quae
+              repudiandae hic aspernatur maiores reiciendis reprehenderit quo
+              ab. Aspernatur eligendi aliquam perspiciatis. Sapiente dicta
+              iste velit quaerat, reprehenderit deleniti odit voluptas.
+              Possimus, nulla eligendi. Iusto, provident.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-8 mx-auto">
+          <div class="rounded bg-blue-400 sm:w-56 w-36 mt-4 sm:mx-16 mx-2 sm:h-16 h-16"></div>
+          <div class="rounded bg-blue-400 sm:w-56 w-36 mt-4 sm:mx-16 sm:h-16 mx-2 h-16"></div>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
+  <!-- t-shirt -->
+  <section class="py-10 bg-blue-100">
+    <div class="container mx-auto sm:h-full h-100 max-w-3xl">
+      <h1 class="p-6 text-white text-4xl text-center">T-shirt</h1>
+
+      <div class="flex flex-col ">
+        <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
+          <div class="rounded bg-blue-400 sm:w-full w-full mt-4 sm:h-96 h-56"></div>
+        </div>
+
+        <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
+          <div class="rounded bg-blue-400 sm:w-full w-full mt-8 sm:h-40 h-100">
+            <p class="leading-loose mx-4 mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              fugit dolores ex earum est autem deleniti distinctio odit cum
+
+            </p>
+          </div>
+        </div>
+
+        <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-8 mx-auto">
+          <div class="rounded bg-blue-400 sm:w-56 w-36 mt-4 sm:mx-16 mx-2 sm:h-16 h-16"></div>
+          <div class="rounded bg-blue-400 sm:w-56 w-36 mt-4 sm:mx-16 sm:h-16 mx-2 h-16"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section class="py-10">
+    <div class="container mx-auto sm:h-screen h-100 max-w-3xl">
+      <h1 class="p-6 text-black text-4xl text-center">contact</h1>
+
+      <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 gap-2  mx-auto  ">
+        <div class="h-16 bg-red-300 col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
+
+          <div class="w-16 mx-4"> NAME</div>
+          <input class="w-48  h-10 " type="text" placeholder="">
+
+
+
+        </div>
+
+
+
+        <div class="h-16 bg-red-300 col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
+          <div class="w-16 mx-4"> PHONE</div>
+          <input class="w-48  h-10 " type="text" placeholder="">
+        </div>
+        <div class="h-16 bg-red-300 sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start">
+          <div class="w-16 mx-4"> EMAIL</div>
+          <input class="w-48  h-10 " type="text" placeholder="">
+        </div>
+        <div class="h-16 bg-red-300 sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full">
+          <div class="w-16 mx-4"> ORDER</div>
+          <select name="pets"   class="w-48 h-10  sm:w-96">
+            <option value="" selected>請選擇欲購買商品</option>
+            <option value="">DUGOUT CD *1</option>
+            <option value="" >DUGOUT CD *2</option>
+            <option value="">DUGOUT CD *3</option>
+            <option value="">DUGOUT CD *4</option>
+            <option value="" disabled>DUGOUT T-Shirt *1</option>
+            <option value="">DUGOUT CD *1 +DUGOUT T-Shirt *1</option>
+        </select>
+        </div>
+        
+
+        <div class="h-16 bg-red-300 col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start">
+          <input class="ml-4 " type="radio" placeholder="">
+          <div class="w-8  mx-4"> 面交</div>
+          <input type="text"  placeholder="地點">
+        </div>
+        <div class="h-16 bg-red-300 col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start">
+          <input class="ml-4" type="radio" placeholder="">
+          <div class="w-8 mx-4"> 711</div>
+          <input type="text"  placeholder="店到店門市">
+        </div>
+
+
+
+
+
+        <div class="h-32 bg-red-300 col-span-2 flex flex-wrap text-center items-center  justify-start">
+          <div class="w-16 mx-4"> MESSAGE</div>
+          <input class="w-auto   h-20 " type="text" placeholder="">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
 </html>

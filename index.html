@@ -11,10 +11,12 @@
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-   
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 
 
   <style>
@@ -33,16 +35,16 @@
 
 <body class="font-mono ">
 
-  <nav class="py-4 bg-black relative">
+  <nav class="py-4 bg-black nav w-full z-10 fixed">
     <div
       class="container mx-auto flex sm:justify-end  sm:items-baseline flex-row sm:flex-row justify-center text-white ">
 
       <ul class="flex text-ul font-mono sm:text-2xl hidden sm:flex">
-        <li class="sm:mr-10 mr-4"><a href="#home">home</a></li>
-        <li class="sm:mr-10 mr-4"><a href="#music">music</a></li>
-        <li class="sm:mr-10 mr-4"> <a href="#video">video</a> </li>
-        <li class="sm:mr-10 mr-4"> <a href="#shirt">t-shirt</a></li>
-        <li class="sm:mr-10 mr-4"><a href="#order">order</a></li>
+        <li class="sm:mr-10 mr-4 home text-yellow-600"><a  href="#home">home</a></li>
+        <li class="sm:mr-10 mr-4 music"><a  href="#music">music</a></li>
+        <li class="sm:mr-10 mr-4 video"> <a  href="#video">video</a> </li>
+        <li class="sm:mr-10 mr-4 shirt"> <a  href="#shirt">t-shirt</a></li>
+        <li class="sm:mr-10 mr-4 order"><a  href="#order">order</a></li>
       </ul>
 
 
@@ -55,7 +57,7 @@
 
 
     </div>
-    <div class="menu  h-screen w-64 bg-gray-200 float-right fixed top-0 -right-64 z-10  sm:hidden duration-700 ">
+    <div class="menu  h-full w-64 bg-gray-200 float-right fixed top-0 -right-64 z-20  sm:hidden duration-700 ">
 
       <ul class="flex text-ul font-mono flex-col items-center mt-8">
         <li class="py-2 mr-4"><a href="#home">home</a></li>
@@ -89,25 +91,25 @@
 
       <div class="px-2 absolute sm:top-40 w-full ">
 
-        <div class="flex flex-row -mx-2  banner">
+        <div class="flex flex-row -mx-2  banner z-0">
 
 
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center   ">
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center   z-0">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center   ">
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center   z-0">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
-           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center  ">
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center z-0 ">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
-        <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center z-0">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
-           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center  z-0">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center  z-0">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
         </div>
@@ -116,7 +118,7 @@
   </section>
 
   <!-- cd -->
-  <section class="py-10 bg-white" id="music">
+  <section class="py-10 bg-white sm:mt-10" id="music">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
       <h1 class="p-6 text-black text-4xl text-center">DUG OUT</h1>
 
@@ -150,7 +152,7 @@
   </section>
 
   <!-- mv -->
-  <section class="py-10 " id="video">
+  <section class="py-10 sm:mt-10" id="video">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
       <h1 class="p-6  text-4xl text-center">DUG OUT MV</h1>
 
@@ -184,7 +186,7 @@
   </section>
 
   <!-- t-shirt -->
-  <section class="py-10 bg-white" id="shirt">
+  <section class="py-10 bg-white sm:mt-10" id="shirt">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
       <h1 class="p-6 text-black text-4xl text-center">T-shirt</h1>
 
@@ -212,12 +214,12 @@
   </section>
 
   <!-- contact -->
-  <section class="py-10 " id="order">
+  <section class="py-10 sm:mt-10" id="order">
     <div class="container mx-auto sm:h-screen h-100 max-w-3xl">
       <h1 class="p-6 text-black text-4xl text-center">contact</h1>
 
-      <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 gap-2  mx-auto  ">
-        <div class="h-16  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
+      <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 sm:gap-2  mx-auto sm:mt-10 ">
+        <div class="h-12  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
 
           <div class="w-16 mx-4"> NAME</div>
           <input class="w-48  h-8 border-b-2 border-yellow-600 focus:ring-yellow-600" type="text" placeholder="">
@@ -232,23 +234,21 @@
           <div class="w-16 mx-4"> PHONE</div>
           <input class="w-48  h-8 border-b-2 border-yellow-600" type="text" placeholder="" maxlength="10">
         </div>
-        <div
-          class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start  sm:w-100">
+        <div class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start  sm:w-100">
           <div class="w-16 mx-4 "> EMAIL</div>
           <input class="w-48  h-8 sm:w-5/12 border-b-2 border-yellow-600" type="text" placeholder="">
         </div>
-        <div
-          class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full">
-          <div class="w-16 mx-4  sm:float-right"> ORDER 
-          </div>  <select name="order" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2">
-              <option value="" selected>請選擇欲購買商品</option>
-              <option value="">DUGOUT CD *1</option>
-              <option value="">DUGOUT CD *2</option>
-              <option value="">DUGOUT CD *3</option>
-              <option value="">DUGOUT CD *4</option>
-              <option value="" disabled>DUGOUT T-Shirt *1</option>
-              <option value="">DUGOUT CD *1 +DUGOUT T-Shirt *1</option>
-            </select>
+        <div class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full">
+          <div class="w-16 mx-4  sm:float-right"> ORDER
+          </div> <select name="order" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2">
+            <option value="" selected>請選擇欲購買商品</option>
+            <option value="">DUGOUT CD *1</option>
+            <option value="">DUGOUT CD *2</option>
+            <option value="">DUGOUT CD *3</option>
+            <option value="">DUGOUT CD *4</option>
+            <option value="" disabled>DUGOUT T-Shirt *1</option>
+            <option value="">DUGOUT CD *1 +DUGOUT T-Shirt *1</option>
+          </select>
 
         </div>
 
@@ -272,13 +272,15 @@
           <div class="w-16 mx-4"> MESSAGE</div>
           <!-- <input class="w-16   h-20 sm:w-10/12 border-2 border-yellow-600 w-7/12" type="text" placeholder=""> -->
 
-          <textarea rows="2" placeholder="留言..." cols="20" class="w-16  px-2 h-20 sm:w-10/12 border-2 border-yellow-600 w-7/12"></textarea>
+          <textarea rows="2" placeholder="留言..." cols="20"
+            class="w-16  px-2 h-20 sm:w-10/12 border-2 border-yellow-600 w-7/12"></textarea>
 
         </div>
 
-<div class="h-16  col-span-2  flex flex-wrap  items-center  justify-end  sm:justify-center cursor-pointer">
-  <input class="w-20 mx-4 h-8 bg-yellow-600 text-white text-center mr-6  cursor-pointer" value="send" > 
-</div>
+        <div class="h-16  col-span-2  flex flex-wrap  items-center  justify-end  sm:justify-center cursor-pointer">
+          <input class="w-20 mx-4 h-8 bg-yellow-600 text-white text-center mr-6  cursor-pointer" value="send"
+            disabled="disabled">
+        </div>
 
       </div>
     </div>
@@ -291,7 +293,7 @@
     var menu = document.querySelector(".menu");
     var closeMenu = document.querySelector(".closeMenu");
 
-    // function 內容寫在裡面
+
     menuBtn.addEventListener('click', function () {
 
       menu.style.right = "0"
@@ -304,35 +306,72 @@
     }, false);
   </script>
 
+  <script>
+    $('nav a').click(function () {
+      targetTop = $($(this).attr('href')).position().top;
+
+      $('html,body').animate({
+        scrollTop: targetTop
+      }, 500);
 
 
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.banner').slick({
-    slidesToShow: 5,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 1500,
-  arrows: false,
-  infinite: true,
-  centerMode:true,
-    centerPadding:'25px',
-  responsive: [
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        centerMode:true,
-        centerPadding:'20px'
-      }
-    },]
     });
-  });
-</script>
+  </script>
 
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.banner').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        infinite: true,
+        centerMode: true,
+        centerPadding: '25px',
+        responsive: [{
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '20px'
+          }
+        }, ]
+      });
+    });
+  </script>
+
+
+
+
+  <script>
+   
+    var navList = document.querySelectorAll('nav li')
+    const sections = document.querySelectorAll("section");
+window.onscroll = () => {
+  var current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 60) {
+      current = section.getAttribute("id"); }
+  });
+
+  navList.forEach((li) => {
+    li.classList.remove("text-yellow-600");
+    if (li.classList.contains(current)) {
+      li.classList.add("text-yellow-600");
+    }
+  });
+};
+
+
+    
+  </script>
 </body>
 
 </html>

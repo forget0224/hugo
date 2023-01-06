@@ -16,29 +16,68 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+     
+   
     }
+
+    /* a{bg-opacity-75} */
+  
   </style>
 </head>
 
 <body class=" ">
-  <!-- <header class="bg-gray-400" style="height: 100px"> -->
-  <nav class="py-4 bg-gray-400">
-    <div class="container mx-auto flex sm:justify-end items-center sm:items-baseline flex-col sm:flex-row">
-      <!-- <div class="rounded bg-gray-300" style="width: 120px;height: 50px;"></div> -->
-      <ul class="flex text-ul font-medium">
-        <li class="mr-4">home</li>
-        <li class="mr-4">music</li>
-        <li class="mr-4">video</li>
-        <li class="mr-4">t-shirt</li>
-        <li class="mr-4">contact</li>
-      </ul>
+
+  <nav class="py-4 bg-black relative">
+     <div class="container mx-auto flex sm:justify-end  sm:items-baseline flex-row sm:flex-row justify-center text-white "> 
+   
+      <ul class="flex text-ul font-mono sm:text-2xl hidden sm:flex">
+        <li class="sm:mr-10 mr-4" ><a href="#home">home</a></li>
+        <li class="sm:mr-10 mr-4" ><a href="#music">music</a></li>
+        <li class="sm:mr-10 mr-4"> <a href="#video">video</a> </li>
+        <li class="sm:mr-10 mr-4"> <a href="#shirt">t-shirt</a></li>
+        <li class="sm:mr-10 mr-4"><a href="#order">order</a></li>
+      </ul> 
+
+
+
+      <ul class="flex text-ul font-mono sm:hidden ">
+        <li class=" mr-64" ><a href="#home">home</a></li>
+        <li class="menuBtn" >漢堡</li>
+        
+      </ul> 
+      
+      
+    </div> 
+    <div class="menu  h-screen w-64 bg-gray-200 float-right fixed top-0 -right-64 z-10  sm:hidden duration-700 ">
+
+       <ul class="flex text-ul font-mono flex-col items-center mt-8">
+        <li class="py-2 mr-4" ><a href="#home">home</a></li>
+        <li class="py-2 mr-4" ><a href="#music">music</a></li>
+        <li class="py-2 mr-4"> <a href="#video">video</a> </li>
+        <li class="py-2 mr-4"> <a href="#shirt">t-shirt</a></li>
+        <li class="py-2 mr-4"><a href="#order">order</a></li>
+        <li class="py-2 mr-4  closeMenu duration-700">X</li>
+      </ul> 
     </div>
+
+   
+   
+
+ </div> 
+
+
+
   </nav>
+
+
+
+
+
   <!-- </header> -->
 
   <!-- 輪播 -->
 
-  <section class="py-10 overflow-hidden">
+  <section class="py-10 overflow-hidden" id="home">
     <div class="container mx-auto sm:h-screen h-96 relative">
       <div class="px-2 absolute sm:top-40 w-full">
         <div class="flex flex-row -mx-2 ">
@@ -48,7 +87,7 @@
           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
             <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+          <!-- <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
             <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
@@ -59,14 +98,14 @@
           </div>
           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
             <div class="rounded bg-blue-100 sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </section>
 
   <!-- cd -->
-  <section class="py-10 bg-blue-100">
+  <section class="py-10 bg-blue-100" id="music">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
       <h1 class="p-6 text-white text-4xl text-center">DUG OUT</h1>
 
@@ -100,7 +139,7 @@
   </section>
 
   <!-- mv -->
-  <section class="py-10 ">
+  <section class="py-10 " id="video">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
       <h1 class="p-6  text-4xl text-center">DUG OUT MV</h1>
 
@@ -134,7 +173,7 @@
   </section>
 
   <!-- t-shirt -->
-  <section class="py-10 bg-blue-100">
+  <section class="py-10 bg-blue-100" id="shirt">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
       <h1 class="p-6 text-white text-4xl text-center">T-shirt</h1>
 
@@ -162,7 +201,7 @@
   </section>
 
   <!-- contact -->
-  <section class="py-10">
+  <section class="py-10" id="order">
     <div class="container mx-auto sm:h-screen h-100 max-w-3xl">
       <h1 class="p-6 text-black text-4xl text-center">contact</h1>
 
@@ -201,14 +240,14 @@
         
 
         <div class="h-16 bg-red-300 col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start">
-          <input class="ml-4 " type="radio" placeholder="">
-          <div class="w-8  mx-4"> 面交</div>
-          <input type="text"  placeholder="地點">
+          <input class="ml-4 " type="radio" name="delivery">
+          <div class="w-10  mx-3"> 面交</div>
+          <input type="text" class="px-2 " placeholder="地點">
         </div>
         <div class="h-16 bg-red-300 col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start">
-          <input class="ml-4" type="radio" placeholder="">
-          <div class="w-8 mx-4"> 711</div>
-          <input type="text"  placeholder="店到店門市">
+          <input class="ml-4" type="radio" name="delivery">
+          <div class="w-10 mx-3"> 711</div>
+          <input type="text" class="px-2 " placeholder="店到店門市">
         </div>
 
 
@@ -222,6 +261,30 @@
       </div>
     </div>
   </section>
+
+
+
+  <script>
+
+var menuBtn = document.querySelector(".menuBtn");
+var menu = document.querySelector(".menu");
+var closeMenu = document.querySelector(".closeMenu");
+
+// function 內容寫在裡面
+menuBtn.addEventListener('click' , function(){
+ 
+  menu.style.right="0"
+} , false);
+
+
+closeMenu.addEventListener('click' , function(){
+ 
+  menu.style.right="-16rem"
+} , false);
+
+
+
+  </script>
 </body>
 
 </html>

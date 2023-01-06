@@ -11,6 +11,12 @@
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   
+
+
   <style>
     * {
       margin: 0;
@@ -19,6 +25,7 @@
 
 
     }
+
 
     /* a{bg-opacity-75} */
   </style>
@@ -79,26 +86,30 @@
 
   <section class="py-10 overflow-hidden" id="home">
     <div class="container mx-auto sm:h-screen h-96 relative">
-      <div class="px-2 absolute sm:top-40 w-full">
-        <div class="flex flex-row -mx-2 ">
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+
+      <div class="px-2 absolute sm:top-40 w-full ">
+
+        <div class="flex flex-row -mx-2  banner">
+
+
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center   ">
+            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center   ">
+            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center  ">
+            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+        <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
+            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
+          </div>
+           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
             <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
           </div>
-          <!-- <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
-          </div>
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
-          </div>
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
-          </div>
-          <div class="w-full sm:w-2/12 px-2 flex flex-row items-center">
-            <div class="rounded bg-black sm:w-full sm:w-60 w-40 mt-4 sm:h-96 h-40"></div>
-          </div> -->
         </div>
       </div>
     </div>
@@ -107,7 +118,7 @@
   <!-- cd -->
   <section class="py-10 bg-white" id="music">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
-      <h1 class="p-6 text-white text-4xl text-center">DUG OUT</h1>
+      <h1 class="p-6 text-black text-4xl text-center">DUG OUT</h1>
 
       <div class="flex flex-col ">
         <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
@@ -175,7 +186,7 @@
   <!-- t-shirt -->
   <section class="py-10 bg-white" id="shirt">
     <div class="container mx-auto sm:h-full h-100 max-w-3xl">
-      <h1 class="p-6 text-white text-4xl text-center">T-shirt</h1>
+      <h1 class="p-6 text-black text-4xl text-center">T-shirt</h1>
 
       <div class="flex flex-col ">
         <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
@@ -292,6 +303,36 @@
       menu.style.right = "-16rem"
     }, false);
   </script>
+
+
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.banner').slick({
+    slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  arrows: false,
+  infinite: true,
+  centerMode:true,
+    centerPadding:'25px',
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        centerMode:true,
+        centerPadding:'20px'
+      }
+    },]
+    });
+  });
+</script>
+
 </body>
 
 </html>

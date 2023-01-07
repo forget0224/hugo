@@ -415,9 +415,75 @@
           if (response == "成功") {
             alert("訂購成功");
           }
+          window.location.reload();
         }
       });
+
+
+
+
+
     }
+
+// 不得为空~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//     function toLoginMember(p,tmp){
+// 	var username,password,verifyCode;
+	
+// 	var url = base + '/lottery/index.do';
+// 	if(p == 'B'){
+// 		url = base + '/index.do';
+// 	}else if(p == 'D'){
+// 		url = base + '/lotteryV3/index.do';
+// 	}
+	
+// 	if(tmp){
+// 		username = $('input#username1').val();
+// 		password = $('input#password1').val();
+// 		verifyCode = $('input#verifyCode1').val();
+// 	}else{
+// 		username = $('input#username').val();
+// 		password = $('input#password').val();
+// 		verifyCode = $('input#verifyCode').val();
+// 	}
+	
+// 	login_tmp(url,username,password,verifyCode);
+
+// }
+
+// function login_tmp(url,username,password,verifyCode){
+	
+// 	if(!username){
+// 		alert("用户名不能为空");
+// 		$('input#username').focus();
+// 		return;
+// 	} else if(!password){
+// 		alert("密码不能为空");
+// 		$('input#password').focus();
+// 		return;
+// 	} else if(password.length<6){
+// 		alert("密码不能小于6位!");
+// 		$('input#password').focus();
+// 		return;
+// 	} else if(!hideVerifyCode || hideVerifyCode == false || hideVerifyCode == 'false'){
+// 		if(!verifyCode){
+// 			alert("验证码不能为空");
+// 			$('input#verifyCode').focus();
+// 			return;
+// 		}
+// 	} 
+	
+
+// 不得為空的寫法~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!
+  //   $("body").keydown(function() {
+	// 	 if (event.keyCode == "13") {//keyCode=13是回车键
+  //         if(username.value && password.value && verifyCode.value){
+  //                loginB();
+  //           }else if(username1.value && password1.value && verifyCode1.value){
+  //                loginBY();
+  //           }
+	// 	   };
+  //  });
   </script>
 
 

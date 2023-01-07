@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hugo -Dugout</title>
-
+  <link rel="Shortcut Icon" href="/images/favicon.ico?v1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,42 +17,47 @@
 
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-  
+
 
 
   <style>
-
-
-
     /* a{bg-opacity-75} */
   </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- <script src="https://kit.fontawesome.com/5c55dc9c61.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body class="font-mono ">
 
-  <nav class="py-4 bg-black nav w-full z-10 fixed shadow-lg">
+  <nav class="py-4 bg-black nav w-full z-20 fixed shadow-lg">
     <div
       class="container mx-auto flex sm:justify-end  sm:items-baseline flex-row sm:flex-row justify-center text-white ">
 
       <ul class="flex text-ul font-mono sm:text-2xl hidden sm:flex">
-        <li class="sm:mr-10 mr-4 home text-yellow-600"><a  href="#home">home</a></li>
-        <li class="sm:mr-10 mr-4 music"><a  href="#music">music</a></li>
-        <li class="sm:mr-10 mr-4 video"> <a  href="#video">video</a> </li>
-        <li class="sm:mr-10 mr-4 shirt"> <a  href="#shirt">t-shirt</a></li>
-        <li class="sm:mr-10 mr-4 order"><a  href="#order">order</a></li>
+        <li class="sm:mr-10 mr-4 home text-yellow-600">
+
+          <a href="#home">home</a></li>
+        <li class="sm:mr-10 mr-4 music"><a href="#music">music</a></li>
+        <li class="sm:mr-10 mr-4 video"> <a href="#video">video</a> </li>
+        <li class="sm:mr-10 mr-4 shirt"> <a href="#shirt">t-shirt</a></li>
+        <li class="sm:mr-10 mr-4 order"><a href="#order">order</a></li>
       </ul>
 
 
 
       <ul class="flex text-ul font-mono sm:hidden ">
-        <li class=" mr-64"><a href="#home">home</a></li>
-        <li class="menuBtn"><i class="fa-solid fa-bars font-black"></i></li>
+        <li class=" mr-64"><a href="#home"><img src="/images/home.jpg" alt="" class="h-8 rounded-full"></a></li>
+        <li class="menuBtn"><i class="fa-solid fa-bars my-2 text-lg"></i></li>
 
       </ul>
 
 
     </div>
-    <div class="menu  h-full w-64 bg-black float-right fixed top-0 -right-64 z-20  sm:hidden duration-700 ">
+    <div class="menu  h-full w-64 bg-black float-right fixed top-0 -right-64 z-10  sm:hidden duration-700 mt-10">
 
       <ul class="flex text-ul font-mono flex-col items-center mt-8 text-yellow-600 ">
         <li class="py-2 mr-4"><a href="#home">home</a></li>
@@ -60,7 +65,7 @@
         <li class="py-2 mr-4"> <a href="#video">video</a> </li>
         <li class="py-2 mr-4"> <a href="#shirt">t-shirt</a></li>
         <li class="py-2 mr-4"><a href="#order">order</a></li>
-        <li class="py-2 mr-4  closeMenu duration-700"><i class="fa-solid fa-xmark font-black"></i></li>
+        <li class="py-2 mr-4  closeMenu duration-700"><i class="fa-solid fa-xmark "></i></li>
       </ul>
     </div>
 
@@ -210,14 +215,15 @@
 
   <!-- contact -->
   <section class="py-10 sm:mt-10" id="order">
-    <div class="container mx-auto sm:h-screen h-100 max-w-3xl">
+    <div class="container mx-auto sm:h-screen h-screen max-w-3xl">
       <h1 class="p-6 text-black text-4xl text-center">contact</h1>
 
       <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 sm:gap-2  mx-auto sm:mt-10 ">
         <div class="h-12  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
 
           <div class="w-16 mx-4"> NAME</div>
-          <input class="w-48  h-8 border-b-2 border-yellow-600 focus:ring-yellow-600" type="text" placeholder="">
+          <input class="w-48  h-8 border-b-2 border-yellow-600 focus:ring-yellow-600" type="text" placeholder=""
+            name="name">
 
 
 
@@ -227,22 +233,23 @@
 
         <div class="h-16  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
           <div class="w-16 mx-4"> PHONE</div>
-          <input class="w-48  h-8 border-b-2 border-yellow-600" type="text" placeholder="" maxlength="10">
+          <input class="w-48  h-8 border-b-2 border-yellow-600" type="text" placeholder="" maxlength="10" name="phone">
         </div>
         <div class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start  sm:w-100">
           <div class="w-16 mx-4 "> EMAIL</div>
-          <input class="w-48  h-8 sm:w-5/12 border-b-2 border-yellow-600" type="text" placeholder="">
+          <input class="w-48  h-8 sm:w-5/12 border-b-2 border-yellow-600" type="text" placeholder="" name="email">
         </div>
         <div class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full">
           <div class="w-16 mx-4  sm:float-right"> ORDER
           </div> <select name="order" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2">
-            <option value="" selected>請選擇欲購買商品</option>
-            <option value="">DUGOUT CD *1</option>
-            <option value="">DUGOUT CD *2</option>
-            <option value="">DUGOUT CD *3</option>
-            <option value="">DUGOUT CD *4</option>
-            <option value="" disabled>DUGOUT T-Shirt *1</option>
-            <option value="">DUGOUT CD *1 +DUGOUT T-Shirt *1</option>
+            <option value="" selected disabled>請選擇欲購買商品</option>
+            <option value="DUGOUT CD *1">DUGOUT CD *1</option>
+            <option value="DUGOUT CD *2">DUGOUT CD *2</option>
+            <option value="DUGOUT CD *3">DUGOUT CD *3</option>
+            <option value="DUGOUT CD *4">DUGOUT CD *4</option>
+            <option value="DUGOUT T-Shirt *1" disabled>DUGOUT T-Shirt *1</option>
+            <option value="DUGOUT CD *1 +DUGOUT T-Shirt *1">DUGOUT CD *1 +DUGOUT T-Shirt *1</option>
+            <option value="其他....請寫在留言處">其他....請寫在留言處</option>
           </select>
 
         </div>
@@ -251,12 +258,12 @@
         <div class="h-16  col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start">
           <input class="ml-5  " type="radio" name="delivery">
           <div class="w-10  mx-3"> 面交</div>
-          <input type="text" class="px-2 h-8 border-b-2 border-yellow-600" placeholder="地點" name="delivery">
+          <input type="text" class="px-2 h-8 border-b-2 border-yellow-600" placeholder="地點" name="ftf">
         </div>
         <div class="h-16  col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start">
           <input class="ml-5" type="radio" name="delivery">
           <div class="w-10 mx-3"> 711</div>
-          <input type="text" class="px-2 h-8  border-b-2 border-yellow-600" placeholder="店到店門市" name="delivery">
+          <input type="text" class="px-2 h-8  border-b-2 border-yellow-600" placeholder="店到店門市" name="sts">
         </div>
 
 
@@ -268,13 +275,13 @@
           <!-- <input class="w-16   h-20 sm:w-10/12 border-2 border-yellow-600 w-7/12" type="text" placeholder=""> -->
 
           <textarea rows="2" placeholder="留言..." cols="20"
-            class="w-16  px-2 h-20 sm:w-10/12 border-2 border-yellow-600 w-7/12"></textarea>
+            class="w-16  px-2 h-20 sm:w-10/12 border-2 border-yellow-600 w-8/12" name="message"></textarea>
 
         </div>
 
         <div class="h-16  col-span-2  flex flex-wrap  items-center  justify-end  sm:justify-center cursor-pointer">
           <input class="w-20 mx-4 h-8 bg-yellow-600 text-white text-center mr-6  cursor-pointer" value="send"
-            disabled="disabled">
+            onclick="send()">
         </div>
 
       </div>
@@ -344,32 +351,79 @@
 
 
   <script>
-   
     var navList = document.querySelectorAll('nav li')
     const sections = document.querySelectorAll("section");
-window.onscroll = () => {
-  var current = "";
+    window.onscroll = () => {
+      var current = "";
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 80) {
-      current = section.getAttribute("id"); }
-  });
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 80) {
+          current = section.getAttribute("id");
+        }
+      });
 
-  navList.forEach((li) => {
-    li.classList.remove("text-yellow-600");
-    if (li.classList.contains(current)) {
-      console.log(current)
-      li.classList.add("text-yellow-600");
-    }
-  });
-};
-
-
-    
+      navList.forEach((li) => {
+        li.classList.remove("text-yellow-600");
+        if (li.classList.contains(current)) {
+          console.log(current)
+          li.classList.add("text-yellow-600");
+        }
+      });
+    };
   </script>
 
-<script src="https://kit.fontawesome.com/5c55dc9c61.js" crossorigin="anonymous"></script>
+
+
+  <script>
+    function send() {
+
+      function getTime() {
+        var nowDate = new Date();
+        var Y = nowDate.getFullYear();
+        var Mh = nowDate.getMonth() + 1;
+        if (Mh > 12) Mh = 01;
+        if (Mh < 10) Mh = '0' + Mh;
+        var D = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
+        var H = nowDate.getHours() < 10 ? '0' + nowDate.getHours() : nowDate.getHours();
+        var M = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
+        var S = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
+
+        var order_time =   Y + '/' + Mh + '/' + D + '  ' + H + ':' + M + ':' + S
+        return order_time
+      }
+
+
+
+
+
+
+      $.ajax({
+        type: "post",
+        url: "https://script.google.com/macros/s/AKfycbyBRxtA6b1jfEbcIY7qONIhxVcN3fjPe960MzdZu7oBxzeesvj4-GfkQNA8SmAuLZ2Dow/exec",
+        data: {
+          "order_time": getTime(),
+          "order_name": $("input[name=name]").val(),
+          "order_phone": $("input[name=phone]").val(),
+          "order_email": $("input[name=email]").val(),
+          "order_order": $("select[name=order]").val(),
+          "order_ftf": $("input[name=ftf]").val(),
+          "order_sts": $("input[name=sts]").val(),
+          "order_message": $("textarea[name=message]").val()
+        },
+        success: function (response) {
+          if (response == "成功") {
+            alert("訂購成功");
+          }
+        }
+      });
+    }
+  </script>
+
+
+
+
+
 </body>
 
 </html>

@@ -17,16 +17,11 @@
 
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
+  
 
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
 
-
-    }
 
 
     /* a{bg-opacity-75} */
@@ -35,7 +30,7 @@
 
 <body class="font-mono ">
 
-  <nav class="py-4 bg-black nav w-full z-10 fixed">
+  <nav class="py-4 bg-black nav w-full z-10 fixed shadow-lg">
     <div
       class="container mx-auto flex sm:justify-end  sm:items-baseline flex-row sm:flex-row justify-center text-white ">
 
@@ -51,21 +46,21 @@
 
       <ul class="flex text-ul font-mono sm:hidden ">
         <li class=" mr-64"><a href="#home">home</a></li>
-        <li class="menuBtn">漢堡</li>
+        <li class="menuBtn"><i class="fa-solid fa-bars font-black"></i></li>
 
       </ul>
 
 
     </div>
-    <div class="menu  h-full w-64 bg-gray-200 float-right fixed top-0 -right-64 z-20  sm:hidden duration-700 ">
+    <div class="menu  h-full w-64 bg-black float-right fixed top-0 -right-64 z-20  sm:hidden duration-700 ">
 
-      <ul class="flex text-ul font-mono flex-col items-center mt-8">
+      <ul class="flex text-ul font-mono flex-col items-center mt-8 text-yellow-600 ">
         <li class="py-2 mr-4"><a href="#home">home</a></li>
         <li class="py-2 mr-4"><a href="#music">music</a></li>
         <li class="py-2 mr-4"> <a href="#video">video</a> </li>
         <li class="py-2 mr-4"> <a href="#shirt">t-shirt</a></li>
         <li class="py-2 mr-4"><a href="#order">order</a></li>
-        <li class="py-2 mr-4  closeMenu duration-700">X</li>
+        <li class="py-2 mr-4  closeMenu duration-700"><i class="fa-solid fa-xmark font-black"></i></li>
       </ul>
     </div>
 
@@ -86,7 +81,7 @@
 
   <!-- 輪播 -->
 
-  <section class="py-10 overflow-hidden" id="home">
+  <section class=" pt-32 h-screen " id="home">
     <div class="container mx-auto sm:h-screen h-96 relative">
 
       <div class="px-2 absolute sm:top-40 w-full ">
@@ -357,13 +352,14 @@ window.onscroll = () => {
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 60) {
+    if (pageYOffset >= sectionTop - 80) {
       current = section.getAttribute("id"); }
   });
 
   navList.forEach((li) => {
     li.classList.remove("text-yellow-600");
     if (li.classList.contains(current)) {
+      console.log(current)
       li.classList.add("text-yellow-600");
     }
   });
@@ -372,6 +368,8 @@ window.onscroll = () => {
 
     
   </script>
+
+<script src="https://kit.fontawesome.com/5c55dc9c61.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -5,11 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Hugo -Dugout</title>
   <link rel="Shortcut Icon" href="/images/favicon.ico?v1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
@@ -17,7 +19,7 @@
 
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-
+  <link href="/css/output.css" rel="stylesheet">
 
 
   <style>
@@ -51,7 +53,8 @@
 
       <ul class="flex text-ul font-mono sm:hidden ">
         <li class=" mr-64"><a href="#home"><img src="/images/home.jpg" alt="" class="h-8 rounded-full"></a></li>
-        <li class="menuBtn"><i class="fa-solid fa-bars my-2 text-lg"></i></li>
+        <li class="menuBtn w-1"><i class="fa-solid fa-bars my-2 text-lg"></i></li>
+        <li class="closeMenu hidden w-1"><i class="fa-solid fa-xmark my-2 text-lg"></i></li>
 
       </ul>
 
@@ -65,7 +68,8 @@
         <li class="py-2 mr-4"> <a href="#video">video</a> </li>
         <li class="py-2 mr-4"> <a href="#shirt">t-shirt</a></li>
         <li class="py-2 mr-4"><a href="#order">order</a></li>
-        <li class="py-2 mr-4  closeMenu duration-700"><i class="fa-solid fa-xmark "></i></li>
+        <!-- <li class="py-2 mr-4  closeMenu duration-700"><i class="fa-solid fa-xmark "></i></li> -->
+
       </ul>
     </div>
 
@@ -144,8 +148,31 @@
         </div>
 
         <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-8 mx-auto">
-          <div class="rounded bg-black sm:w-56 w-36 mt-4 sm:mx-16 mx-2 sm:h-16 h-16"></div>
-          <div class="rounded bg-black sm:w-56 w-36 mt-4 sm:mx-16 sm:h-16 mx-2 h-16"></div>
+          <div
+            class="group   rounded bg-white text-black border-2 border-black hover:bg-black hover:text-white sm:w-56 w-36 mt-4 sm:mx-16 mx-2 sm:h-16 h-16">
+
+
+            <div class="w-100 h-100  group-hover:hidden">share</div>
+
+            
+            <div class="hidden w-1/2 h-100 float-left group-hover:block group-hover:text-white">
+              <a class="" href="https://www.facebook.com/sharer/sharer.php?u=https://hugo-5um.pages.dev/"
+                target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+            </div>
+
+
+
+            <div class="hidden w-1/2 h-100 float-left group-hover:block group-hover:text-white"><a class=""
+              href="http://line.naver.jp/R/msg/text/?https://hugo-5um.pages.dev/" target="_blank"><i
+                class="fa-brands fa-line"></i></a></div>
+            
+          </div>
+          <div
+            class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-white sm:w-56 w-36 mt-4 sm:mx-16 sm:h-16 mx-2 h-16">
+            link</div>
         </div>
       </div>
     </div>
@@ -158,10 +185,26 @@
 
       <div class="flex flex-col ">
         <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
-          <div class="rounded bg-black sm:w-full w-full mt-4 sm:h-96 h-56"></div>
+          <div class="rounded bg-black sm:w-full w-full mt-4 sm:h-96 h-56">
+
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tt7_Z4QUC5U"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe> -->
+          </div>
         </div>
 
+
         <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
+          <div class="rounded bg-black sm:w-full w-full mt-4 sm:h-96 h-56">
+
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/W03GlZ9vNlk"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>  -->
+          </div>
+        </div>
+        <!-- <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
           <div class="rounded bg-black sm:w-full w-full mt-8 sm:h-56 h-100">
             <p class="leading-loose mx-4 mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
@@ -175,7 +218,7 @@
               Possimus, nulla eligendi. Iusto, provident.
             </p>
           </div>
-        </div>
+        </div> -->
 
         <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-8 mx-auto">
           <div class="rounded bg-black sm:w-56 w-36 mt-4 sm:mx-16 mx-2 sm:h-16 h-16"></div>
@@ -298,14 +341,27 @@
 
     menuBtn.addEventListener('click', function () {
 
-      menu.style.right = "0"
+      closeMenu.classList.remove("hidden");
+      menu.style.right = "0";
+      menuBtn.classList.add("hidden")
+      closeMenu.classList.add("block");
     }, false);
 
 
     closeMenu.addEventListener('click', function () {
 
-      menu.style.right = "-16rem"
+      menuBtn.classList.remove("hidden");
+      menu.style.right = "-16rem";
+      closeMenu.classList.add("hidden")
+      menuBtn.classList.add("block");
     }, false);
+
+    document.addEventListener('click', function () {
+      menuBtn.classList.remove("hidden");
+      menu.style.right = "-16rem"
+      closeMenu.classList.add("hidden")
+      menuBtn.classList.add("block");
+    }, true);
   </script>
 
   <script>
@@ -325,22 +381,27 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('.banner').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToShow: 4,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 0,
+        speed: 1500,
         arrows: false,
         infinite: true,
-        centerMode: true,
-        centerPadding: '25px',
+        cssEase: "linear",
+
+
         responsive: [{
           breakpoint: 480,
           settings: {
+
             slidesToShow: 2,
-            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 1500,
+            arrows: false,
             infinite: true,
-            centerMode: true,
-            centerPadding: '20px'
+            cssEase: "linear",
+
           }
         }, ]
       });
@@ -374,6 +435,11 @@
   </script>
 
 
+  <script>
+    //  var shareBtn = document.querySelectorAll('shareBtn')
+    // const sections = document.querySelectorAll("section");
+  </script>
+
 
   <script>
     function send() {
@@ -389,7 +455,7 @@
         var M = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
         var S = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
 
-        var order_time =   Y + '/' + Mh + '/' + D + '  ' + H + ':' + M + ':' + S
+        var order_time = Y + '/' + Mh + '/' + D + '  ' + H + ':' + M + ':' + S
         return order_time
       }
 
@@ -425,65 +491,65 @@
 
     }
 
-// 不得为空~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // 不得为空~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//     function toLoginMember(p,tmp){
-// 	var username,password,verifyCode;
-	
-// 	var url = base + '/lottery/index.do';
-// 	if(p == 'B'){
-// 		url = base + '/index.do';
-// 	}else if(p == 'D'){
-// 		url = base + '/lotteryV3/index.do';
-// 	}
-	
-// 	if(tmp){
-// 		username = $('input#username1').val();
-// 		password = $('input#password1').val();
-// 		verifyCode = $('input#verifyCode1').val();
-// 	}else{
-// 		username = $('input#username').val();
-// 		password = $('input#password').val();
-// 		verifyCode = $('input#verifyCode').val();
-// 	}
-	
-// 	login_tmp(url,username,password,verifyCode);
+    //     function toLoginMember(p,tmp){
+    // 	var username,password,verifyCode;
 
-// }
+    // 	var url = base + '/lottery/index.do';
+    // 	if(p == 'B'){
+    // 		url = base + '/index.do';
+    // 	}else if(p == 'D'){
+    // 		url = base + '/lotteryV3/index.do';
+    // 	}
 
-// function login_tmp(url,username,password,verifyCode){
-	
-// 	if(!username){
-// 		alert("用户名不能为空");
-// 		$('input#username').focus();
-// 		return;
-// 	} else if(!password){
-// 		alert("密码不能为空");
-// 		$('input#password').focus();
-// 		return;
-// 	} else if(password.length<6){
-// 		alert("密码不能小于6位!");
-// 		$('input#password').focus();
-// 		return;
-// 	} else if(!hideVerifyCode || hideVerifyCode == false || hideVerifyCode == 'false'){
-// 		if(!verifyCode){
-// 			alert("验证码不能为空");
-// 			$('input#verifyCode').focus();
-// 			return;
-// 		}
-// 	} 
-	
+    // 	if(tmp){
+    // 		username = $('input#username1').val();
+    // 		password = $('input#password1').val();
+    // 		verifyCode = $('input#verifyCode1').val();
+    // 	}else{
+    // 		username = $('input#username').val();
+    // 		password = $('input#password').val();
+    // 		verifyCode = $('input#verifyCode').val();
+    // 	}
 
-// 不得為空的寫法~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!
-  //   $("body").keydown(function() {
-	// 	 if (event.keyCode == "13") {//keyCode=13是回车键
-  //         if(username.value && password.value && verifyCode.value){
-  //                loginB();
-  //           }else if(username1.value && password1.value && verifyCode1.value){
-  //                loginBY();
-  //           }
-	// 	   };
-  //  });
+    // 	login_tmp(url,username,password,verifyCode);
+
+    // }
+
+    // function login_tmp(url,username,password,verifyCode){
+
+    // 	if(!username){
+    // 		alert("用户名不能为空");
+    // 		$('input#username').focus();
+    // 		return;
+    // 	} else if(!password){
+    // 		alert("密码不能为空");
+    // 		$('input#password').focus();
+    // 		return;
+    // 	} else if(password.length<6){
+    // 		alert("密码不能小于6位!");
+    // 		$('input#password').focus();
+    // 		return;
+    // 	} else if(!hideVerifyCode || hideVerifyCode == false || hideVerifyCode == 'false'){
+    // 		if(!verifyCode){
+    // 			alert("验证码不能为空");
+    // 			$('input#verifyCode').focus();
+    // 			return;
+    // 		}
+    // 	} 
+
+
+    // 不得為空的寫法~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!
+    //   $("body").keydown(function() {
+    // 	 if (event.keyCode == "13") {//keyCode=13是回车键
+    //         if(username.value && password.value && verifyCode.value){
+    //                loginB();
+    //           }else if(username1.value && password1.value && verifyCode1.value){
+    //                loginBY();
+    //           }
+    // 	   };
+    //  });
   </script>
 
 

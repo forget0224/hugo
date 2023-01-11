@@ -579,6 +579,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-\[-16px\] {
+  bottom: -16px;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -661,6 +665,10 @@ video {
   margin-top: 0.75rem;
 }
 
+.ml-\[75px\] {
+  margin-left: 75px;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -671,6 +679,54 @@ video {
 
 .mr-6 {
   margin-right: 1.5rem;
+}
+
+.-ml-1 {
+  margin-left: -0.25rem;
+}
+
+.-ml-0\.5 {
+  margin-left: -0.125rem;
+}
+
+.-ml-0 {
+  margin-left: -0px;
+}
+
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mb-0\.5 {
+  margin-bottom: 0.125rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[-3px\] {
+  margin-top: -3px;
+}
+
+.ml-0\.5 {
+  margin-left: 0.125rem;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.ml-\[-4px\] {
+  margin-left: -4px;
 }
 
 .block {
@@ -733,6 +789,30 @@ video {
   height: 30px;
 }
 
+.h-\[32px\] {
+  height: 32px;
+}
+
+.h-\[64px\] {
+  height: 64px;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-\[59px\] {
+  height: 59px;
+}
+
+.h-\[58px\] {
+  height: 58px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -781,6 +861,10 @@ video {
   width: 2.5rem;
 }
 
+.w-\[120px\] {
+  width: 120px;
+}
+
 .w-7\/12 {
   width: 58.333333%;
 }
@@ -791,6 +875,26 @@ video {
 
 .w-20 {
   width: 5rem;
+}
+
+.w-\[110px\] {
+  width: 110px;
+}
+
+.w-\[1\/2\] {
+  width: 1/2;
+}
+
+.w-\[1\] {
+  width: 1;
+}
+
+.w-\[109px\] {
+  width: 109px;
+}
+
+.w-\[111px\] {
+  width: 111px;
 }
 
 .max-w-3xl {
@@ -829,12 +933,26 @@ video {
   justify-content: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-r {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .border-2 {
@@ -902,6 +1020,18 @@ video {
   padding-top: 8rem;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pr-0\.5 {
+  padding-right: 0.125rem;
+}
+
+.pr-0 {
+  padding-right: 0px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -962,6 +1092,16 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -970,6 +1110,21 @@ video {
 
 .duration-700 {
   transition-duration: 700ms;
+}
+
+.news_marquee {
+  animation : slide 7s linear infinite ;
+  color:white;
+}
+
+@keyframes slide {
+  0% {
+    transform: translatex(0%)
+  }
+
+  100% {
+    transform: translatex(100%)
+  }
 }
 
 .hover\:bg-black:hover {
@@ -985,6 +1140,16 @@ video {
 .hover\:text-red-600:hover {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.hover\:text-green-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .focus\:ring-yellow-600:focus {
@@ -1003,6 +1168,14 @@ video {
 @media (min-width: 640px) {
   .sm\:top-40 {
     top: 10rem;
+  }
+
+  .sm\:bottom-\[-16px\] {
+    bottom: -16px;
+  }
+
+  .sm\:bottom-\[-8px\] {
+    bottom: -8px;
   }
 
   .sm\:col-span-1 {
@@ -1028,6 +1201,30 @@ video {
 
   .sm\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .sm\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .sm\:mt-\[-3px\] {
+    margin-top: -3px;
+  }
+
+  .sm\:ml-\[-4px\] {
+    margin-left: -4px;
+  }
+
+  .sm\:-ml-0\.5 {
+    margin-left: -0.125rem;
+  }
+
+  .sm\:-ml-0 {
+    margin-left: -0px;
   }
 
   .sm\:flex {
@@ -1074,12 +1271,24 @@ video {
     width: 14rem;
   }
 
-  .sm\:w-5\/12 {
-    width: 41.666667%;
+  .sm\:w-\[192px\] {
+    width: 192px;
   }
 
   .sm\:w-10\/12 {
     width: 83.333333%;
+  }
+
+  .sm\:w-\[220px\] {
+    width: 220px;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:w-\[111px\] {
+    width: 111px;
   }
 
   .sm\:grid-cols-2 {
@@ -1115,4 +1324,3 @@ video {
     line-height: 2rem;
   }
 }
-

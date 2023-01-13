@@ -39,6 +39,10 @@ $('nav a').click(function () {
 });
 
 
+
+
+
+
 $(document).ready(function () {
     $('.banner').slick({
         slidesToShow: 4,
@@ -64,27 +68,38 @@ $(document).ready(function () {
 
             }
         }]
+
+
+
+
     });
 
 
 
-    $('.cd-slide,.tshirt-slide').slick({
-       
-            dots: true,
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
-        
 
+    const linkBtn=document.querySelectorAll("div.linkBtn").length;
+    for(let i=0; linkBtn> i;i++){
+      document.querySelectorAll("div.linkBtn")[i].addEventListener("click",function(){
+        // alert(i+1);
+        const clipboard = new ClipboardJS('.link');
+        document.querySelectorAll(".linkBtn span")[i].innerHTML = "copied!"
+      })
+    }
+    
+
+    $('.cd-slide,.tshirt-slide').slick({
+
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
 
         responsive: [{
             breakpoint: 480,
             settings: {
 
                 slidesToShow: 1,
-                // autoplay: true,
-                // autoplaySpeed: 0,
                 speed: 1500,
                 arrows: false,
                 infinite: true,
@@ -129,9 +144,11 @@ window.onscroll = () => {
 };
 
 
-function send() {
+function send(name, phone, email, order, radio) {
 
-    function getTime() {
+
+
+    function getTime(order_time, order_number) {
         var nowDate = new Date();
         var Y = nowDate.getFullYear();
         var Mh = nowDate.getMonth() + 1;
@@ -142,9 +159,69 @@ function send() {
         var M = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
         var S = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
 
+        var order_number = Mh + D + H + M + (Math.round(Math.random() * 89 + 100)).toString();
         var order_time = Y + '/' + Mh + '/' + D + '  ' + H + ':' + M + ':' + S
-        return order_time
+        return {
+            order_time,
+            order_number
+        }
+
+
     }
+
+
+
+
+    var name, phone, email, order, radio
+    name = $("input[name=name]").val()
+    phone = $("input[name=phone]").val()
+    email = $("input[name=email]").val()
+    order = $("select[name=order]").val()
+
+    radio = $("input[name='delivery']:checked")
+    // seven = $("input[name='711']:checked").val()
+    store = $("input[name=sts]").val()
+    sts = $("input[id=sts]:checked")
+
+    if (!name) {
+        alert("姓名不能為空");
+        $('input[name=name]').focus();
+        return;
+    } else if (!phone) {
+        alert("手機不能為空");
+        $('input[name=phone]').focus();
+        return;
+    } else if (phone.length < 10) {
+        alert("手機不能小于10位!");
+        $('input[name=email]').focus();
+        return;
+    } else if (!order) {
+        if (!order) {
+            alert("購買項目不能为空");
+            $('select[name=order]').focus();
+            return;
+        }
+    } else if (radio.length = 0) {
+        console.log(radio.length)
+        alert("寄送方式請擇一");
+        return;
+
+    } else if (radio.length = 1 && !store && sts.length > 0) {
+        console.log(radio)
+        alert("店到店門市不能為空");
+        $('input[name=sts]').focus();
+        return;
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -153,9 +230,10 @@ function send() {
 
     $.ajax({
         type: "post",
-        url: "https://script.google.com/macros/s/AKfycbyBRxtA6b1jfEbcIY7qONIhxVcN3fjPe960MzdZu7oBxzeesvj4-GfkQNA8SmAuLZ2Dow/exec",
+        url: "https://script.google.com/macros/s/AKfycbzzGPnNyMrr4u3gPaQxDjOwHGUMS-tXbtgyEhgPSk4DzMBRtsl8DHQFfQ2ZICcHHi7ouQ/exec",
         data: {
-            "order_time": getTime(),
+            "order_time": getTime().order_time,
+            "order_number": getTime().order_number,
             "order_name": $("input[name=name]").val(),
             "order_phone": $("input[name=phone]").val(),
             "order_email": $("input[name=email]").val(),
@@ -166,11 +244,13 @@ function send() {
         },
         success: function (response) {
             if (response == "成功") {
-                alert("訂購成功");
+                alert("訂購成功，訂單編號為" + getTime().order_number);
             }
             window.location.reload();
         }
     });
+
+
 
 
 

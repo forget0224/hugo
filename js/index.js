@@ -2,7 +2,6 @@ var menuBtn = document.querySelector(".menuBtn");
 var menu = document.querySelector(".menu");
 var closeMenu = document.querySelector(".closeMenu");
 
-
 menuBtn.addEventListener('click', function () {
 
     closeMenu.classList.remove("hidden");
@@ -41,8 +40,6 @@ $('nav a').click(function () {
 
 
 
-
-
 $(document).ready(function () {
     $('.banner').slick({
         slidesToShow: 4,
@@ -74,19 +71,6 @@ $(document).ready(function () {
 
     });
 
-
-
-
-    const linkBtn=document.querySelectorAll("div.linkBtn").length;
-    for(let i=0; linkBtn> i;i++){
-      document.querySelectorAll("div.linkBtn")[i].addEventListener("click",function(){
-        // alert(i+1);
-        const clipboard = new ClipboardJS('.link');
-        document.querySelectorAll(".linkBtn span")[i].innerHTML = "copied!"
-      })
-    }
-    
-
     $('.cd-slide,.tshirt-slide').slick({
 
         dots: true,
@@ -110,16 +94,44 @@ $(document).ready(function () {
     });
 
 
+    $('.news_marquee').slick({
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 80000,
+        dots: false,
+        infinite: true,
+        cssEase: 'linear',
 
+        responsive: [{
+            breakpoint: 480,
+            settings: {
 
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                speed: 100000,
+                dots: false,
+                infinite: true,
+                
+                cssEase: 'linear',
 
-
-
+            }
+        }]
+    });
+    
 
 });
 
 
-
+const linkBtn=document.querySelectorAll("div.linkBtn").length;
+    for(let i=0; linkBtn> i;i++){
+      document.querySelectorAll("div.linkBtn")[i].addEventListener("click",function(){
+        // alert(i+1);
+        const clipboard = new ClipboardJS('.link');
+        document.querySelectorAll(".linkBtn span")[i].innerHTML = "copied!"
+      })
+    }
 
 
 var navList = document.querySelectorAll('nav li')
@@ -144,9 +156,40 @@ window.onscroll = () => {
 };
 
 
-function send(name, phone, email, order, radio) {
-
-
+$("#send").click(function(){
+    var name, phone, order, store,sts
+    name = $("input[name=name]").val()
+    phone = $("input[name=phone]").val()
+    order = $("select[name=order]").val()
+    store = $("input[name=sts]").val()
+    var sts = $("input[id=sts]:checked").length
+    var check=$("input[name='delivery']:checked").length;//判斷有多少個方框被勾選
+    if (!name) {
+        alert("姓名不能為空");
+        $('input[name=name]').focus();
+        return false;
+    } else if (!phone) {
+        alert("手機不能為空");
+        $('input[name=phone]').focus();
+        return false;
+    } else if (phone.length < 10) {
+        alert("手機不能小於10位!");
+        $('input[name=phone]').focus();
+        return false;
+    } else if (!order) {
+        if (!order) {
+            alert("購買項目不能為空");
+            $('select[name=order]').focus();
+            return false;
+        }
+    }else  if(check==0){
+        alert("寄送方式請擇一");
+        return false;//不要提交表單
+    }else if(sts==1 &!store){
+        alert("店到店門市不能為空");
+    $('input[name=sts]').focus();
+    return false;
+    }
 
     function getTime(order_time, order_number) {
         var nowDate = new Date();
@@ -168,65 +211,6 @@ function send(name, phone, email, order, radio) {
 
 
     }
-
-
-
-
-    var name, phone, email, order, radio
-    name = $("input[name=name]").val()
-    phone = $("input[name=phone]").val()
-    email = $("input[name=email]").val()
-    order = $("select[name=order]").val()
-
-    radio = $("input[name='delivery']:checked")
-    // seven = $("input[name='711']:checked").val()
-    store = $("input[name=sts]").val()
-    sts = $("input[id=sts]:checked")
-
-    if (!name) {
-        alert("姓名不能為空");
-        $('input[name=name]').focus();
-        return;
-    } else if (!phone) {
-        alert("手機不能為空");
-        $('input[name=phone]').focus();
-        return;
-    } else if (phone.length < 10) {
-        alert("手機不能小于10位!");
-        $('input[name=email]').focus();
-        return;
-    } else if (!order) {
-        if (!order) {
-            alert("購買項目不能为空");
-            $('select[name=order]').focus();
-            return;
-        }
-    } else if (radio.length = 0) {
-        console.log(radio.length)
-        alert("寄送方式請擇一");
-        return;
-
-    } else if (radio.length = 1 && !store && sts.length > 0) {
-        console.log(radio)
-        alert("店到店門市不能為空");
-        $('input[name=sts]').focus();
-        return;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     $.ajax({
         type: "post",
@@ -250,8 +234,6 @@ function send(name, phone, email, order, radio) {
         }
     });
 
+})
 
 
-
-
-}

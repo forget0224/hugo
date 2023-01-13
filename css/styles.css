@@ -2,19 +2,3 @@
 @tailwind components; 
 @tailwind utilities;
 
-.news_marquee {
-    animation : slide 7s linear infinite ;
-    color:white;
-}
-
-@keyframes slide {
-    0% {
-    transform: translatex(0%)
-    }
-
-    100% {
-    transform: translatex(100%)
-    }
-}
-
-

@@ -94,32 +94,7 @@ $(document).ready(function () {
     });
 
 
-    $('.news_marquee').slick({
-        slidesToShow: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 80000,
-        dots: false,
-        infinite: true,
-        cssEase: 'linear',
-
-        responsive: [{
-            breakpoint: 480,
-            settings: {
-
-                slidesToShow: 1,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 100000,
-                dots: false,
-                infinite: true,
-                
-                cssEase: 'linear',
-
-            }
-        }]
-    });
-    
+   
 
 });
 
@@ -156,12 +131,80 @@ window.onscroll = () => {
 };
 
 
+
+
+
+const orderSelect = document.getElementById('order');
+const sizeSelect = document.getElementById('size');
+const quantitySelect = document.getElementById('quantity');
+const optSize=sizeSelect.getElementsByTagName("option")
+const optQuan=quantitySelect.getElementsByTagName("option")
+
+orderSelect.addEventListener('change', (e) => {
+  switch (e.target.value) {
+    case 'DUGOUT Album tee': {
+    
+        sizeSelect.classList.remove('hidden');
+        sizeSelect.classList.add('block');
+        quantitySelect.classList.remove('hidden');
+        quantitySelect.classList.add('block');
+        optSize[0].selected=true;
+        optQuan[0].selected=true;
+      break;
+    }
+    case 'DUGOUT Album cd': {
+        sizeSelect.classList.remove('block');
+        sizeSelect.classList.add('hidden');
+        quantitySelect.classList.remove('hidden');
+        quantitySelect.classList.add('block');
+        optQuan[0].selected=true;
+      break;
+    }
+    case 'DUGOUT Album bundle': {
+        sizeSelect.classList.remove('hidden');
+        sizeSelect.classList.add('block');
+        quantitySelect.classList.remove('hidden');
+        quantitySelect.classList.add('block');
+        optSize[0].selected=true;
+        optQuan[0].selected=true;
+      break;
+    }
+    // default: {
+    //      sizeSelect;
+    //     quantitySelect;
+        
+    //   break;
+    // }  
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $("#send").click(function(){
-    var name, phone, order, store,sts
+    var name, phone, order, store,sts,size,quantity
     name = $("input[name=name]").val()
     phone = $("input[name=phone]").val()
     order = $("select[name=order]").val()
     store = $("input[name=sts]").val()
+    size = $("input[name=size]").val()
+    quantity = $("input[name=quantity]").val()
     var sts = $("input[id=sts]:checked").length
     var check=$("input[name='delivery']:checked").length;//判斷有多少個方框被勾選
     if (!name) {
@@ -214,7 +257,7 @@ $("#send").click(function(){
 
     $.ajax({
         type: "post",
-        url: "https://script.google.com/macros/s/AKfycbzzGPnNyMrr4u3gPaQxDjOwHGUMS-tXbtgyEhgPSk4DzMBRtsl8DHQFfQ2ZICcHHi7ouQ/exec",
+        url: "https://script.google.com/macros/s/AKfycbxS6kr3GEfvLL64wT5Q-qS765mKqDPMnb-BPK7pu2SGHZN21lo7tEChpbXTS_F-X1Rmgw/exec",
         data: {
             "order_time": getTime().order_time,
             "order_number": getTime().order_number,
@@ -222,6 +265,8 @@ $("#send").click(function(){
             "order_phone": $("input[name=phone]").val(),
             "order_email": $("input[name=email]").val(),
             "order_order": $("select[name=order]").val(),
+            "order_size": $("select[name=size]").val(),
+            "order_quantity": $("select[name=quantity]").val(),
             "order_ftf": $("[id='ftf']:checked").val(),
             "order_sts": $("input[name=sts]").val(),
             "order_message": $("textarea[name=message]").val()

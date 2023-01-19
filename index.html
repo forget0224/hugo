@@ -524,40 +524,37 @@
       <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 sm:gap-2  mx-auto sm:mt-10 ">
         <div class="h-12  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
 
-          <div class="w-16 mx-4"> NAME</div>
+          <label for="name" class="w-16 mx-4"> NAME</label>
           <input class="w-48  h-8 border-b-2 border-yellow-600 focus:ring-yellow-600" type="text" placeholder=""
-            name="name">
+            name="name" id="name">
         </div>
 
 
 
         <div class="h-16  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
-          <div class="w-16 mx-4"> PHONE</div>
-          <input class="w-48  h-8 border-b-2 border-yellow-600  " type="text" placeholder="" maxlength="10"
-            name="phone">
+          <label for="phone" class="w-16 mx-4"> PHONE</label>
+          <input class="w-48  h-8 border-b-2 border-yellow-600  " type="text" placeholder="" maxlength="10" name="phone"
+            id="phone">
         </div>
         <div class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start  sm:w-full">
-          <div class="w-16 mx-4 "> EMAIL</div>
-          <input class="w-48  h-8 sm:w-[192px] border-b-2 border-yellow-600" type="text" placeholder="" name="email">
+          <label for="email" class="w-16 mx-4 "> EMAIL</label>
+          <input class="w-48  h-8 sm:w-[192px] border-b-2 border-yellow-600" type="text" placeholder="" id="email"
+            name="email">
         </div>
 
 
 
         <div
           class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full relative">
-          <div class="w-16 mx-4  sm:float-right"> ORDER
-          </div>
+          <label class="w-16 mx-4  sm:float-right"> PRODUCT
+          </label>
 
 
-          <select name="order" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2" id="order">
+          <select name="product" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2" id="product">
             <option value="" selected disabled>請選擇欲購買商品</option>
-            <option value="DUGOUT Album cd">DUGOUT Album cd</option>
-            <!-- <option value="DUGOUT Album cd*2">DUGOUT Album cd*2 $1000</option> -->
-            <option value="DUGOUT Album tee">DUGOUT Album tee</option>
-            <!-- <option value="DUGOUT Album tee*2 ">DUGOUT Album tee*2 $1800</option> -->
-            <option value="DUGOUT Album bundle">DUGOUT Album bundle</option>
-            <!-- <option value="DUGOUT Album bundle*2">DUGOUT Album bundle*2 $2200</option> -->
-            <!-- <option value="其他....請寫在留言處">其他....請寫在留言處</option> -->
+            <option value="0">DUGOUT Album CD</option>
+            <option value="1">DUGOUT Album TEE</option>
+            <option value="2">DUGOUT Album BUNDLE</option>
           </select>
           <p class="italic absolute bottom-[-16px] sm:bottom-[-8px] right-[30px] text-gray-500">請耐心等候3-5個工作天。</p>
         </div>
@@ -567,18 +564,17 @@
 
         <div
           class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center mt-4 justify-start w-full relative hidden"
-          id="size">
-          <div class="w-16 mx-4  sm:float-right">SIZE
-          </div>
+          id="size-field">
+          <label class="w-16 mx-4  sm:float-right">SIZE
+          </label>
 
 
-          <select name="size" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2 ">
-            <option value="請選擇尺寸" selected disabled>請選擇尺寸</option>
+          <select id="size" name="size" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2 ">
+            <option value="" selected disabled>請選擇尺寸</option>
             <option value="M">M</option>
             <option value="L">L</option>
             <option value="XL">XL</option>
           </select>
-          <!-- <p class="italic absolute bottom-[-16px] sm:bottom-[-8px] right-[30px] text-gray-500">請耐心等候3-5個工作天。</p> -->
         </div>
 
 
@@ -586,85 +582,62 @@
 
         <div
           class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full relative hidden"
-          id="quantity">
-          <div class="w-16 mx-4  sm:float-right">QUANTITY
-          </div>
-          <select name="quantity" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2 ">
-            <option value="請選擇數量" selected disabled>請選擇數量</option>
+          id="quantity-field">
+          <label class="w-16 mx-4  sm:float-right">QUANTITY
+          </label>
+          <select id="quantity" name="quantity" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2 ">
+            <option value="" selected disabled>請選擇數量</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <!-- <p class="italic absolute bottom-[-16px] sm:bottom-[-8px] right-[30px] text-gray-500">請耐心等候3-5個工作天。</p> -->
+          
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <div class="h-16  col-span-2 sm:col-span-2 flex flex-wrap text-center items-center  justify-start  sm:mt-0">
-          <div class="w-16 mx-4  sm:float-right">DELIVERY
-          </div>
+          <label class="w-16 mx-4  sm:float-right">DELIVERY
+          </label>
         </div>
-
-
-
 
         <div class="h-8  col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start ml-[75px]  sm:mt-0">
 
-          <input class="ml-5  " type="radio" name="delivery" value="面交" id="ftf">
-          <div class="w-10  mx-3 "> 面交</div>
+          <input class="ml-5  " type="radio" name="delivery" value="0" id="ftf" name="ftf" checked>
+          <label for="ftf" class="w-10  mx-3 "> 面交</label>
           <div class=" ">南京三民2號出口</div>
         </div>
         <div
           class="h-8  col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start ml-[75px] sm:ml-0 relative">
-          <input class="ml-5" type="radio" name="delivery" id="sts">
-          <div class="w-10 mx-3 "> 711</div>
+          <input class="ml-5" type="radio" name="delivery" id="sts" value="60">
+          <label for="sts" class="w-10 mx-3 "> 711</label>
           <input type="text" class="px-2 h-8  border-b-2 border-yellow-600  w-[120px]" placeholder="店到店門市" name="sts">
 
         </div>
 
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+  
+        <hr class="col-span-2 mt-6" width="100%">
 
-        <!-- <div class="h-16  col-span-2 sm:col-span-2 flex flex-wrap text-center  items-center  justify-start  sm:mt-0">
-        </div>  -->
-        <hr class="col-span-2 mt-6" width="100%" >
-
-
-
-
-        <div class="h-4  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm text-gray-500 mt-2">
+        <div id="sub-total-label"
+          class="h-4  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm text-gray-500 mt-2 hidden">
 
           <div class="w-[80px]   "> SUBTOTAL</div>
-          <div class=" w-[130px]     text-right ">$ <span class="w-[50px] inline-block" id="subT" >1100</span> </div>
+          <div class=" w-[130px]     text-right ">$ <span class="w-[50px] inline-block" id="subTotal">0</span> </div>
         </div>
-        <div class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm   text-gray-500">
+        <div id="shipping-label"
+          class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm   text-gray-500 hidden">
 
           <div class="w-[80px] "> SHIPPING</div>
-          <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="shipping ">60</span> </div>
+          <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="shipping">0</span> </div>
         </div>
 
-        <div class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px]  sm:mt-0">
+        <div id="total-label"
+          class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px]  sm:mt-0 hidden">
 
           <div class="w-[80px]  ">TOTAL</div>
-          <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="total">1500</span> </div>
+          <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="total">0</span> </div>
         </div>
-       
-
-
-
-
 
 
 

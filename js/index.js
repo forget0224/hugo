@@ -1,6 +1,6 @@
-var menuBtn = document.querySelector(".menuBtn");
-var menu = document.querySelector(".menu");
-var closeMenu = document.querySelector(".closeMenu");
+const menuBtn = document.querySelector(".menuBtn");
+const menu = document.querySelector(".menu");
+const closeMenu = document.querySelector(".closeMenu");
 
 menuBtn.addEventListener('click', function () {
 
@@ -109,13 +109,13 @@ const linkBtn=document.querySelectorAll("div.linkBtn").length;
     }
 
 
-var navList = document.querySelectorAll('nav li')
+const navList = document.querySelectorAll('nav li')
 const sections = document.querySelectorAll("section");
 window.onscroll = () => {
     var current = "";
 
     sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
+        var sectionTop = section.offsetTop;
         if (pageYOffset >= sectionTop - 80) {
             current = section.getAttribute("id");
         }
@@ -134,52 +134,102 @@ window.onscroll = () => {
 
 
 
-const orderSelect = document.getElementById('order');
-const sizeSelect = document.getElementById('size');
-const quantitySelect = document.getElementById('quantity');
-const optSize=sizeSelect.getElementsByTagName("option")
-const optQuan=quantitySelect.getElementsByTagName("option")
+// const productSelect = $('#product');
+// const sizeSelect = $('#size');
+// const quantitySelect = document.getElementById('quantity');
+// const optSize=sizeSelect.getElementsByTagName("option")
+// const optQuan=quantitySelect.getElementsByTagName("option")
 
-orderSelect.addEventListener('change', (e) => {
-  switch (e.target.value) {
-    case 'DUGOUT Album tee': {
+// orderSelect.addEventListener('change', (e) => {
+//   switch (e.target.value) {
+//     case 'DUGOUT Album tee': {
     
-        sizeSelect.classList.remove('hidden');
-        sizeSelect.classList.add('block');
-        quantitySelect.classList.remove('hidden');
-        quantitySelect.classList.add('block');
-        optSize[0].selected=true;
-        optQuan[0].selected=true;
-      break;
-    }
-    case 'DUGOUT Album cd': {
-        sizeSelect.classList.remove('block');
-        sizeSelect.classList.add('hidden');
-        quantitySelect.classList.remove('hidden');
-        quantitySelect.classList.add('block');
-        optQuan[0].selected=true;
-      break;
-    }
-    case 'DUGOUT Album bundle': {
-        sizeSelect.classList.remove('hidden');
-        sizeSelect.classList.add('block');
-        quantitySelect.classList.remove('hidden');
-        quantitySelect.classList.add('block');
-        optSize[0].selected=true;
-        optQuan[0].selected=true;
-      break;
-    }
-    // default: {
-    //      sizeSelect;
-    //     quantitySelect;
+//         sizeSelect.classList.remove('hidden');
+//         // sizeSelect.classList.add('block');
+//         quantitySelect.classList.remove('hidden');
+//         // quantitySelect.classList.add('block');
+//         optSize[0].selected=true;
+//         optQuan[0].selected=true;
+//       break;
+//     }
+//     case 'DUGOUT Album cd': {
+//         // sizeSelect.classList.remove('block');
+//         sizeSelect.classList.add('hidden');
+//         quantitySelect.classList.remove('hidden');
+//         // quantitySelect.classList.add('block');
+//         optQuan[0].selected=true;
+//       break;
+//     }
+//     case 'DUGOUT Album bundle': {
+//         sizeSelect.classList.remove('hidden');
+//         // sizeSelect.classList.add('block');
+//         quantitySelect.classList.remove('hidden');
+//         // quantitySelect.classList.add('block');
+//         optSize[0].selected=true;
+//         optQuan[0].selected=true;
+//       break;
+//     }
+//     // default: {
+//     //      sizeSelect;
+//     //     quantitySelect;
         
-    //   break;
-    // }  
-  }
-});
+//     //   break;
+//     // }  
+//   }
+// });
 
+$('#product').change(changeProduct)
+$('#quantity').change(processTotal)
+$('input[type=radio][name=delivery]').change(processTotal)
 
+function changeProduct() {
+    switchProduct()
+    resetParameter()
+    processTotal()
+}
 
+function switchProduct () {
+    $('#quantity-field').removeClass('hidden')
+    if($('#product').val() === '0') {
+        $('#size-field').addClass('hidden')
+    } else {
+        $('#size-field').removeClass('hidden')
+    }
+}
+
+function resetParameter() {
+    $('#size').val('')
+    $('#quantity').val('')
+}
+
+const PRODUCT_LIST = {
+    '0': {
+        name:'DUGOUT Album CD',
+        price: 500
+    },
+    '1': {
+        name:'DUGOUT Album TEE',
+        price: 900
+    },
+    '2': {
+        name:'DUGOUT Album BUNDLE',
+        price: 1100
+    }
+}
+
+function processTotal() {
+    const productPrice = PRODUCT_LIST[$('#product').val()]?.price || 0
+    const quantity = Number($('#quantity').val())
+    const subTotal = productPrice * quantity
+    const shipping =  Number($('input[name=delivery]:checked').val()) || 0
+    const total = subTotal + shipping
+    $('#subTotal').text(subTotal)
+    $('#shipping').text(shipping)
+    $('#total').text(total)
+    subTotal ? $('#sub-total-label').removeClass('hidden') : $('#sub-total-label').addClass('hidden')
+    shipping ? $('#shipping-label').removeClass('hidden') : $('#shipping-label').addClass('hidden')
+    total ? $('#total-label').removeClass('hidden') : $('#total-label').addClass('hidden')
+}
 
 
 
@@ -201,7 +251,7 @@ $("#send").click(function(){
     var name, phone, order, store,sts,size,quantity
     name = $("input[name=name]").val()
     phone = $("input[name=phone]").val()
-    order = $("select[name=order]").val()
+    order = $("#product").val()
     store = $("input[name=sts]").val()
     size = $("input[name=size]").val()
     quantity = $("input[name=quantity]").val()
@@ -235,15 +285,15 @@ $("#send").click(function(){
     }
 
     function getTime(order_time, order_number) {
-        var nowDate = new Date();
-        var Y = nowDate.getFullYear();
-        var Mh = nowDate.getMonth() + 1;
+        const nowDate = new Date();
+        const Y = nowDate.getFullYear();
+        const Mh = nowDate.getMonth() + 1;
         if (Mh > 12) Mh = 01;
         if (Mh < 10) Mh = '0' + Mh;
-        var D = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
-        var H = nowDate.getHours() < 10 ? '0' + nowDate.getHours() : nowDate.getHours();
-        var M = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
-        var S = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
+        const D = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
+        const H = nowDate.getHours() < 10 ? '0' + nowDate.getHours() : nowDate.getHours();
+        const M = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
+        const S = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
 
         var order_number = Mh + D + H + M + (Math.round(Math.random() * 89 + 100)).toString();
         var order_time = Y + '/' + Mh + '/' + D + '  ' + H + ':' + M + ':' + S
@@ -264,11 +314,12 @@ $("#send").click(function(){
             "order_name": $("input[name=name]").val(),
             "order_phone": $("input[name=phone]").val(),
             "order_email": $("input[name=email]").val(),
-            "order_order": $("select[name=order]").val(),
+            "order_order": PRODUCT_LIST[$('#product').val()].name,
             "order_size": $("select[name=size]").val(),
             "order_quantity": $("select[name=quantity]").val(),
-            "order_ftf": $("[id='ftf']:checked").val(),
+            "order_ftf": $("[id='ftf']:checked + label").text(),
             "order_sts": $("input[name=sts]").val(),
+            "order_total": $("#total").text(),
             "order_message": $("textarea[name=message]").val()
         },
         success: function (response) {

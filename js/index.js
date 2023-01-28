@@ -94,19 +94,23 @@ $(document).ready(function () {
     });
 
 
-   
+
+    checkInput()
+
+
+
 
 });
 
 
-const linkBtn=document.querySelectorAll("div.linkBtn").length;
-    for(let i=0; linkBtn> i;i++){
-      document.querySelectorAll("div.linkBtn")[i].addEventListener("click",function(){
+const linkBtn = document.querySelectorAll("div.linkBtn").length;
+for (let i = 0; linkBtn > i; i++) {
+    document.querySelectorAll("div.linkBtn")[i].addEventListener("click", function () {
         // alert(i+1);
         const clipboard = new ClipboardJS('.link');
         document.querySelectorAll(".linkBtn span")[i].innerHTML = "copied!"
-      })
-    }
+    })
+}
 
 
 const navList = document.querySelectorAll('nav li')
@@ -143,7 +147,7 @@ window.onscroll = () => {
 // orderSelect.addEventListener('change', (e) => {
 //   switch (e.target.value) {
 //     case 'DUGOUT Album tee': {
-    
+
 //         sizeSelect.classList.remove('hidden');
 //         // sizeSelect.classList.add('block');
 //         quantitySelect.classList.remove('hidden');
@@ -172,7 +176,7 @@ window.onscroll = () => {
 //     // default: {
 //     //      sizeSelect;
 //     //     quantitySelect;
-        
+
 //     //   break;
 //     // }  
 //   }
@@ -188,9 +192,9 @@ function changeProduct() {
     processTotal()
 }
 
-function switchProduct () {
+function switchProduct() {
     $('#quantity-field').removeClass('hidden')
-    if($('#product').val() === '0') {
+    if ($('#product').val() === '0') {
         $('#size-field').addClass('hidden')
     } else {
         $('#size-field').removeClass('hidden')
@@ -204,24 +208,24 @@ function resetParameter() {
 
 const PRODUCT_LIST = {
     '0': {
-        name:'DUGOUT Album CD',
+        name: 'DUGOUT Album CD',
         price: 500
     },
     '1': {
-        name:'DUGOUT Album TEE',
+        name: 'DUGOUT Album TEE',
         price: 900
     },
     '2': {
-        name:'DUGOUT Album BUNDLE',
+        name: 'DUGOUT Album BUNDLE',
         price: 1100
     }
 }
 
 function processTotal() {
-    const productPrice = PRODUCT_LIST[$('#product').val()]?.price || 0
+    const productPrice = PRODUCT_LIST[$('#product').val()] ?.price || 0
     const quantity = Number($('#quantity').val())
     const subTotal = productPrice * quantity
-    const shipping =  Number($('input[name=delivery]:checked').val()) || 0
+    const shipping = Number($('input[name=delivery]:checked').val()) || 0
     const total = subTotal + shipping
     $('#subTotal').text(subTotal)
     $('#shipping').text(shipping)
@@ -233,77 +237,194 @@ function processTotal() {
 
 
 
+// function checkInput(){
+//     var name, phone, email, order, store, sts, size, quantity
+//     name = $("input[name=name]").val()
+//     phone = $("input[name=phone]").val()
+//     email = $("input[name=email]").val()
+//     order = $("#product").val()
+//     store = $("input[name=sts]").val()
+//     size = $("input[name=size]").val()
+//     quantity = $("input[name=quantity]").val()
+//     var sts = $("input[id=sts]:checked").length
+//     var check = $("input[name='delivery']:checked").length; //判斷有多少個方框被勾選
+//     var MobileReg = /^(09)[0-9]{8}$/;
+//     var emailReg = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+//     // (str.match(MobileReg)) ? true : false
+//     if (!name) {
+//         alert("姓名不能為空");
+//         $('input[name=name]').focus();
+//         return false;
+//     } else if (!phone) {
+//         alert("手機不能為空");
+//         $('input[name=phone]').focus();
+//         return false;
+//     } else if (phone.length < 10) {
+//         alert("手機不能小於10位!");
+//         $('input[name=phone]').focus();
+//         return false;
+//     } else if (!order) {
+//         if (!order) {
+//             alert("購買項目不能為空");
+//             $('select[name=order]').focus();
+//             return false;
+//         }
+//     } else if (check == 0) {
+//         alert("寄送方式請擇一");
+//         return false; //不要提交表單
+//     } else if (sts == 1 & !store) {
+//         alert("店到店門市不能為空");
+//         $('input[name=sts]').focus();
+//         return false;
+//     } 
+//     else if (phone.test(MobileReg)) {
+//         alert("請輸入正確手機格式");
+//         $('input[name=phone]').focus();
+//         return false;
+//     } else if (email.test(emailReg) = false) {
+//         alert("請輸入正確email格式");
+//         $('input[name=email]').focus();
+//         return false;
+//     }
+
+
+//     // if(phone.match(MobileReg)){}else{alert("請輸入正確email格式");$('input[name=email]').focus();return false}
+//     //     phone.match(MobileReg) ? true : false;alert("請輸入正確手機格式");$('input[name=phone]').focus();
+//     //     email.match(emailReg) ? true : false;alert("請輸入正確email格式");$('input[name=email]').focus();
+
+// }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-$("#send").click(function(){
-    var name, phone, order, store,sts,size,quantity
-    name = $("input[name=name]").val()
-    phone = $("input[name=phone]").val()
-    order = $("#product").val()
-    store = $("input[name=sts]").val()
-    size = $("input[name=size]").val()
-    quantity = $("input[name=quantity]").val()
-    var sts = $("input[id=sts]:checked").length
-    var check=$("input[name='delivery']:checked").length;//判斷有多少個方框被勾選
-    if (!name) {
-        alert("姓名不能為空");
-        $('input[name=name]').focus();
-        return false;
-    } else if (!phone) {
-        alert("手機不能為空");
-        $('input[name=phone]').focus();
-        return false;
-    } else if (phone.length < 10) {
-        alert("手機不能小於10位!");
-        $('input[name=phone]').focus();
-        return false;
-    } else if (!order) {
-        if (!order) {
-            alert("購買項目不能為空");
-            $('select[name=order]').focus();
-            return false;
+function checkInput() {
+    $('#myForm').validate({
+        /* 常用檢測屬性
+       required:必填
+       noSpace:空白
+       minlength:最小長度
+       maxlength:最大長度
+       email:信箱格式
+       number:數字格式
+       url:網址格式https://www.minwt.com
+       */
+        onkeyup: function (element, event) {
+            //去除左側空白
+            var value = this.elementValue(element).replace(/^\s+/g, "");
+            $(element).val(value);
+        },
+        rules: {
+            name: {
+                required: true
+            },
+            phone: {
+                required: true,
+                minlength: 10,
+                number: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            delivery: {
+                required: true
+            },
+            product: {
+                required: true
+            },
+            size: {
+                required: true
+            },
+            quantity: {
+                required: true
+            },
+          
+            sts: {
+                required: "#sts:checked"
+            },
+        },
+        messages: {
+            name: {
+                required: '必填'
+            },
+            phone: {
+                required: '必填',
+                minlength: '不得少於10位',
+                number: '電話需為數字'
+            },
+            delivery: '必填',
+            email: {
+                required: '必填',
+                email: 'Email格式不正確'
+            },
+            product: {
+                required: '必填'
+            },
+            size: {
+                required: '必填'
+            },
+            quantity: {
+                required: '必填'
+            },
+            sts: {
+                required: '必填'
+            }
+        },
+        submitHandler: function () {
+            postSheet();
+        },
+        invalidHandler: function () {
+            return false
         }
-    }else  if(check==0){
-        alert("寄送方式請擇一");
-        return false;//不要提交表單
-    }else if(sts==1 &!store){
-        alert("店到店門市不能為空");
-    $('input[name=sts]').focus();
-    return false;
+    });
+const stsCheck = $("input[id='sts']");
+const deliveryCheck = $('input[name=delivery]');
+const stsName = $("input[name=sts]")
+
+deliveryCheck.click(function () {
+
+    if (stsCheck.is(":checked")) {
+        stsName.prop("disabled", false)
+
+    } else {
+        stsName.prop("disabled", true)
     }
 
-    function getTime(order_time, order_number) {
-        const nowDate = new Date();
-        const Y = nowDate.getFullYear();
-        const Mh = nowDate.getMonth() + 1;
-        if (Mh > 12) Mh = 01;
-        if (Mh < 10) Mh = '0' + Mh;
-        const D = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
-        const H = nowDate.getHours() < 10 ? '0' + nowDate.getHours() : nowDate.getHours();
-        const M = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
-        const S = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
 
-        var order_number = Mh + D + H + M + (Math.round(Math.random() * 89 + 100)).toString();
-        var order_time = Y + '/' + Mh + '/' + D + '  ' + H + ':' + M + ':' + S
-        return {
-            order_time,
-            order_number
-        }
+})
 
 
+}
+
+document.querySelector('#myForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('submit');
+});
+
+
+function getTime(order_time, order_number) {
+    const nowDate = new Date();
+    const Y = nowDate.getFullYear();
+    let Mh = nowDate.getMonth() + 1;
+    if (Mh > 12) Mh = 01;
+    if (Mh < 10) Mh = '0' + Mh;
+    const D = nowDate.getDate() < 10 ? '0' + nowDate.getDate() : nowDate.getDate();
+    const H = nowDate.getHours() < 10 ? '0' + nowDate.getHours() : nowDate.getHours();
+    const M = nowDate.getMinutes() < 10 ? '0' + nowDate.getMinutes() : nowDate.getMinutes();
+    const S = nowDate.getSeconds() < 10 ? '0' + nowDate.getSeconds() : nowDate.getSeconds();
+
+    var order_number = Mh + D + H + M + (Math.round(Math.random() * 89 + 100)).toString();
+    var order_time = Y + '/' + Mh + '/' + D + '  ' + H + ':' + M + ':' + S
+    return {
+        order_time,
+        order_number
     }
+
+
+}
+
+function postSheet() {
+
+    getTime();
 
     $.ajax({
         type: "post",
@@ -330,6 +451,4 @@ $("#send").click(function(){
         }
     });
 
-})
-
-
+}

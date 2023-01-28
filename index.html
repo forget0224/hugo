@@ -24,7 +24,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
   <style>
 
 
@@ -45,7 +46,7 @@
         <li class="sm:mr-10 mr-4 music"><a href="#music">music</a></li>
         <li class="sm:mr-10 mr-4 shirt"> <a href="#shirt">t-shirt</a></li>
         <li class="sm:mr-10 mr-4 video"> <a href="#video">video</a> </li>
-        <li class="sm:mr-10 mr-4 stream"> <a href="#stream">stream</a> </li>
+        <li class="sm:mr-10 mr-4 steam"> <a href="#steam">steam</a> </li>
         <li class="sm:mr-10 mr-4 order"><a href="#order">order</a></li>
       </ul>
 
@@ -67,7 +68,7 @@
         <li class="py-2 mr-4"><a href="#music">music</a></li>
         <li class="py-2 mr-4"> <a href="#shirt">t-shirt</a></li>
         <li class="py-2 mr-4"> <a href="#video">video</a> </li>
-        <li class="py-2 mr-4"> <a href="#stream">stream</a> </li>
+        <li class="py-2 mr-4"> <a href="#steam">steam</a> </li>
         <li class="py-2 mr-4"><a href="#order">order</a></li>
         <!-- <li class="py-2 mr-4  closeMenu duration-700"><i class="fa-solid fa-xmark "></i></li> -->
 
@@ -226,34 +227,34 @@
 
         <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-4 mx-auto">
           <div
-            class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[220px] w-32 mt-4  h-[42px]">
+            class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[195px] w-[100px] mt-4  h-[42px]">
 
 
-            <div class=" text-center   group-hover:hidden mx-auto sm:w-[220px]  h-[42px] sm:mt-[-3px]  sm:ml-[-4px] ">
-              <span class="text-xl block mt-1"> share</span>
+            <span class=" text-center   group-hover:hidden mx-auto sm:w-[195px]  h-[42px]  text-xl block mt-1">
+              <!-- <span class="text-xl  block mt-1"> </span> -->
+              share
+            </span>
 
-            </div>
 
-
-            <div
-              class="hidden w-1/2   h-[39px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
+            <span
+              class="hidden w-1/2   h-[42px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
               <a class="block " href="https://www.facebook.com/sharer/sharer.php?u=https://hugo-5um.pages.dev/"
                 target="_blank">
                 <i class="fa-brands fa-facebook-f  mt-3 "></i>
               </a>
 
-            </div>
+            </span>
 
 
 
-            <div
-              class="hidden sm:w-[111px]  w-1/2  h-[39px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
+            <span
+              class="hidden   w-1/2  h-[42px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
               <a class="block " href="http://line.naver.jp/R/msg/text/?https://hugo-5um.pages.dev/" target="_blank"><i
-                  class="fa-brands fa-line  mt-3  "></i></a></div>
+                  class="fa-brands fa-line  mt-3  "></i></a></span>
 
           </div>
           <div
-            class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-56 w-32 mt-4  h-[42px] mx-2 text-center  cursor-pointer linkBtn">
+            class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-56 w-[100px] mt-4  h-[42px] mx-2 text-center  cursor-pointer linkBtn">
             <span class=" mt-1 block text-xl link" data-clipboard-text="https://hugo-5um.pages.dev/">link</span></div>
         </div>
       </div>
@@ -262,7 +263,7 @@
   <!-- t-shirt -->
   <section class="py-10 bg-white sm:mt-10" id="shirt">
     <div class="container mx-auto sm:h-full h-full max-w-3xl">
-      <h1 class="p-6 text-black text-4xl text-center">Dugout album tee
+      <h1 class="p-6 text-black text-4xl text-center">album tee
       </h1>
 
       <div class="flex flex-col ">
@@ -327,38 +328,38 @@
 
         <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-4 mx-auto">
           <div
-            class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[220px] w-32 mt-4  h-[42px]">
+            class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[195px] w-[100px] mt-4  h-[42px]">
 
 
-            <div class=" text-center   group-hover:hidden mx-auto sm:w-[220px]  h-[42px] sm:mt-[-3px]  sm:ml-[-4px] ">
-              <span class="text-xl block mt-1"> share</span>
+            <span class=" text-center   group-hover:hidden mx-auto sm:w-[195px]  h-[42px]  text-xl block mt-1">
+              <!-- <span class="text-xl  block mt-1"> </span> -->
+              share
+            </span>
 
-            </div>
 
-
-            <div
-              class="hidden w-1/2   h-[39px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
+            <span
+              class="hidden w-1/2   h-[42px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
               <a class="block " href="https://www.facebook.com/sharer/sharer.php?u=https://hugo-5um.pages.dev/"
                 target="_blank">
                 <i class="fa-brands fa-facebook-f  mt-3 "></i>
               </a>
 
-            </div>
+            </span>
 
 
 
-            <div
-              class="hidden sm:w-[111px]  w-1/2  h-[39px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
+            <span
+              class="hidden   w-1/2  h-[42px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
               <a class="block " href="http://line.naver.jp/R/msg/text/?https://hugo-5um.pages.dev/" target="_blank"><i
-                  class="fa-brands fa-line  mt-3  "></i></a></div>
+                  class="fa-brands fa-line  mt-3  "></i></a></span>
 
+              </div>
+            <div
+              class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-56 w-[100px] mt-4  h-[42px] mx-2 text-center  cursor-pointer linkBtn">
+              <span class=" mt-1 block text-xl link" data-clipboard-text="https://hugo-5um.pages.dev/">link</span></div>
           </div>
-          <div
-            class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-56 w-32 mt-4  h-[42px] mx-2 text-center  cursor-pointer linkBtn">
-            <span class=" mt-1 block text-xl link" data-clipboard-text="https://hugo-5um.pages.dev/">link</span></div>
         </div>
       </div>
-    </div>
   </section>
   <!-- mv -->
   <section class="py-10 sm:mt-10" id="video">
@@ -378,37 +379,38 @@
       </div>
       <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-4 mx-auto">
         <div
-          class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[220px] w-32 mt-4  h-[42px]">
+          class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[195px] w-[100px] mt-4  h-[42px]">
 
 
-          <div class=" text-center   group-hover:hidden mx-auto sm:w-[220px]  h-[42px] sm:mt-[-3px]  sm:ml-[-4px] ">
-            <span class="text-xl  block mt-1"> share</span>
+          <span class=" text-center   group-hover:hidden mx-auto sm:w-[195px]  h-[42px]  text-xl block mt-1">
+            <!-- <span class="text-xl  block mt-1"> </span> -->
+            share
+          </span>
 
-          </div>
 
-
-          <div
-            class="hidden w-1/2   h-[39px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
+          <span
+            class="hidden w-1/2   h-[42px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
             <a class="block " href="https://www.facebook.com/sharer/sharer.php?u=https://hugo-5um.pages.dev/"
               target="_blank">
               <i class="fa-brands fa-facebook-f  mt-3 "></i>
             </a>
 
-          </div>
+          </span>
 
 
 
-          <div
-            class="hidden sm:w-[111px]  w-1/2  h-[39px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
+          <span
+            class="hidden   w-1/2  h-[42px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
             <a class="block " href="http://line.naver.jp/R/msg/text/?https://hugo-5um.pages.dev/" target="_blank"><i
-                class="fa-brands fa-line  mt-3  "></i></a></div>
+                class="fa-brands fa-line  mt-3  "></i></a></span>
 
 
         </div>
         <div
-          class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-56 w-32 mt-4  mx-2 h-[42px] text-center leading-4">
+          class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-[195px] w-[100px] mt-4  mx-2 h-[42px] text-center leading-4">
           <span class="text-2xl mt-1 block cursor-pointer"
-            onclick="window.open('https://www.youtube.com/cStZQbnHbiE')"><i class="fa-brands fa-youtube"></i></span>
+            onclick="window.open('https://www.youtube.com/watch?v=cStZQbnHbiE')"><i
+              class="fa-brands fa-youtube"></i></span>
         </div>
       </div>
       <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
@@ -422,35 +424,36 @@
       </div>
       <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-4 mx-auto">
         <div
-          class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[220px] w-32 mt-4  h-[42px]">
+          class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[195px] w-[100px] mt-4  h-[42px]">
 
 
-          <div class=" text-center   group-hover:hidden mx-auto sm:w-[220px]  h-[42px] sm:mt-[-3px]  sm:ml-[-4px] ">
-            <span class="text-xl  block mt-1"> share</span>
+          <span class=" text-center   group-hover:hidden mx-auto sm:w-[195px]  h-[42px]  text-xl block mt-1">
+            <!-- <span class="text-xl  block mt-1"> </span> -->
+            share
+          </span>
 
-          </div>
 
-
-          <div
-            class="hidden w-1/2   h-[39px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
+          <span
+            class="hidden w-1/2   h-[42px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
             <a class="block " href="https://www.facebook.com/sharer/sharer.php?u=https://hugo-5um.pages.dev/"
               target="_blank">
               <i class="fa-brands fa-facebook-f  mt-3 "></i>
             </a>
 
-          </div>
+          </span>
 
 
 
-          <div
-            class="hidden sm:w-[111px]  w-1/2  h-[39px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
+          <span
+            class="hidden   w-1/2  h-[42px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
             <a class="block " href="http://line.naver.jp/R/msg/text/?https://hugo-5um.pages.dev/" target="_blank"><i
-                class="fa-brands fa-line  mt-3  "></i></a></div>
+                class="fa-brands fa-line  mt-3  "></i></a>
+          </span>
 
 
         </div>
         <div
-          class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-56 w-32 mt-4  mx-2 h-[42px] text-center leading-4">
+          class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-[195px] w-[100px] mt-4  mx-2 h-[42px] text-center leading-4">
           <span class="text-2xl mt-1 block cursor-pointer" onclick="window.open('https://youtu.be/W03GlZ9vNlk')"><i
               class="fa-brands fa-youtube"></i></span></div>
       </div>
@@ -467,35 +470,35 @@
       </div>
       <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-4 mx-auto">
         <div
-          class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[220px] w-32 mt-4  h-[42px]">
+          class="group rounded flex flex-row  bg-white text-black border-2 border-black   hover:text-white sm:w-[195px] w-[100px] mt-4  h-[42px]">
 
 
-          <div class=" text-center   group-hover:hidden mx-auto sm:w-[220px]  h-[60px] sm:mt-[-3px]  sm:ml-[-4px] ">
-            <span class="text-xl  block mt-1"> share</span>
+          <span class=" text-center   group-hover:hidden mx-auto sm:w-[195px]  h-[42px]  text-xl block mt-1">
+            <!-- <span class="text-xl  block mt-1"> </span> -->
+            share
+          </span>
 
-          </div>
-
-          <div
-            class="hidden w-1/2   h-[39px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
+          <span
+            class="hidden w-1/2   h-[42px] group-hover:block sm:-ml-0.5 -ml-0.5   mt-[-1px] rounded-l  text-center  text-black  hover:bg-black hover:text-blue-600">
             <a class="block " href="https://www.facebook.com/sharer/sharer.php?u=https://hugo-5um.pages.dev/"
               target="_blank">
               <i class="fa-brands fa-facebook-f  mt-3 "></i>
             </a>
 
-          </div>
+          </span>
 
 
 
-          <div
-            class="hidden sm:w-[111px]  w-1/2  h-[39px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
+          <span
+            class="hidden   w-1/2  h-[42px]   mt-[-1px] group-hover:block ml-0.5  text-center  text-black  hover:bg-black hover:text-green-500">
             <a class="block " href="http://line.naver.jp/R/msg/text/?https://hugo-5um.pages.dev/" target="_blank"><i
-                class="fa-brands fa-line  mt-3  "></i></a></div>
+                class="fa-brands fa-line  mt-3  "></i></a></span>
 
 
 
         </div>
         <div
-          class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-56 w-32 mt-4 mx-2 h-[42px] text-center ">
+          class="rounded bg-white text-black border-2 border-black hover:bg-black hover:text-red-600 sm:w-[195px] w-[100px] mt-4 mx-2 h-[42px] text-center ">
           <span class="text-2xl mt-1 block cursor-pointer"
             onclick="window.open('https://www.youtube.com/watch?v=tt7_Z4QUC5U')"><i
               class="fa-brands fa-youtube"></i></span></div>
@@ -505,10 +508,10 @@
     </div>
   </section>
 
-  <section class="py-10 sm:mt-10" id="stream">
+  <section class="py-10 sm:mt-10" id="steam">
     <div class="container mx-auto sm:h-full h-full max-w-3xl">
 
-      <h1 class="p-6  text-4xl text-center">stream</h1>
+      <h1 class="p-6  text-4xl text-center">steam</h1>
       <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450"
         style="overflow:hidden;background:transparent;"
         sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
@@ -519,144 +522,164 @@
   <!-- contact -->
   <section class="py-10 sm:mt-10" id="order">
     <div class="container mx-auto sm:h-screen h-screen max-w-3xl">
-      <h1 class="p-6 text-black text-4xl text-center">contact</h1>
+      <h1 class="p-6 text-black text-4xl text-center">order</h1>
 
-      <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 sm:gap-2  mx-auto sm:mt-10 ">
-        <div class="h-12  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
+      <form action="" id="myForm" method="post">
+        <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 sm:gap-2  mx-auto sm:mt-10 ">
 
-          <label for="name" class="w-16 mx-4"> NAME</label>
-          <input class="w-48  h-8 border-b-2 border-yellow-600 focus:ring-yellow-600" type="text" placeholder=""
-            name="name" id="name">
+          <fieldset class="h-16  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
+
+
+
+            <label for="name" class="w-16 mx-4"> NAME</label>
+            <input class="w-52  h-8 border-b-2 border-yellow-600 focus:ring-yellow-600" type="text" placeholder=""
+              name="name" id="name">
+
+          </fieldset>
+
+          <fieldset class="h-16  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
+
+            <label for="phone" class="w-16 mx-4"> PHONE</label>
+            <input class="w-52  h-8 border-b-2 border-yellow-600  " type="text" placeholder="" maxlength="10"
+              name="phone" id="phone">
+
+          </fieldset>
+
+          <fieldset
+            class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start  sm:w-full">
+
+            <label for="email" class="w-16 mx-4 "> EMAIL</label>
+            <input class="w-52  h-8 sm:w-[208px] border-b-2 border-yellow-600" type="text" placeholder="" id="email"
+              name="email">
+
+          </fieldset>
+
+          <fieldset
+            class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start  sm:w-full relative">
+
+            <label class="w-16 mx-4  sm:float-right"> PRODUCT
+            </label>
+
+
+            <select name="product" class="w-52 h-8  sm:w-[596px] border-2 border-yellow-600  px-2" id="product">
+              <option value="" selected disabled>請選擇欲購買商品</option>
+              <option value="0">DUGOUT Album CD</option>
+              <option value="1">DUGOUT Album TEE</option>
+              <option value="2">DUGOUT Album BUNDLE</option>
+            </select>
+            <p class="italic absolute bottom-[-16px] right-[14px]  sm:right-[72px] text-gray-500">請耐心等候3-5個工作天。</p>
+
+
+          </fieldset>
+
+
+
+
+          <fieldset
+            class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center mt-4 justify-start w-full relative hidden"
+            id="size-field">
+
+            <label class="w-16 mx-4  sm:float-right">SIZE
+            </label>
+
+
+            <select id="size" name="size" class="w-52 h-8  sm:w-[596px] border-2 border-yellow-600  px-2 ">
+              <option value="" selected disabled>請選擇尺寸</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+
+
+          </fieldset>
+
+          <fieldset
+            class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full relative hidden"
+            id="quantity-field">
+
+            <label class="w-16 mx-4  sm:float-right">QUANTITY
+            </label>
+            <select id="quantity" name="quantity" class="w-52 h-8   sm:w-[596px] border-2 border-yellow-600  px-2 ">
+              <option value="" selected disabled>請選擇數量</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+
+          </fieldset>
+          <fieldset
+            class="h-16  col-span-2 sm:col-span-2 flex flex-wrap text-center items-center  justify-start  sm:mt-0">
+
+            <label class="w-16 mx-4  sm:float-right">DELIVERY
+            </label>
+
+          </fieldset>
+          <fieldset
+            class="h-8  col-span-2 sm:justify-around flex flex-wrap  items-center  justify-start ml-[75px]  sm:mt-0">
+
+            <div class="sm:w-1/2">
+              <input class="ml-5  delivery" type="radio" name="delivery" value="0" id="ftf" name="ftf" checked>
+              <label for="ftf" class="w-10  mx-3 "> 面交</label>
+              <span class=" ">南京三民2號出口</span>
+            </div>
+
+
+            <div class="sm:w-1/2">
+              <input class="ml-5 delivery" type="radio" name="delivery" id="sts" value="60">
+              <label for="sts" class="w-10 mx-3 "> 711</label>
+              <input type="text" class="px-2 h-8  border-b-2 border-yellow-600  w-[125px]" placeholder="店到店門市"
+                name="sts" disabled>
+            </div>
+
+
+          </fieldset>
+
+
+
+          <hr class="col-span-2 mt-14" width="100%">
+
+          <div id="sub-total-label"
+            class="h-4  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm text-gray-500 mt-2 hidden">
+
+            <div class="w-[80px]   "> SUBTOTAL</div>
+            <div class=" w-[130px]     text-right ">$ <span class="w-[50px] inline-block" id="subTotal">0</span> </div>
+          </div>
+          <div id="shipping-label"
+            class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm   text-gray-500 hidden">
+
+            <div class="w-[80px] "> SHIPPING</div>
+            <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="shipping">0</span> </div>
+          </div>
+
+          <div id="total-label"
+            class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px]  sm:mt-0 hidden">
+
+            <div class="w-[80px]  ">TOTAL</div>
+            <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="total">0</span> </div>
+          </div>
+
+
+
+
+          <div class="h-32  col-span-2 flex flex-wrap text-center items-center  justify-start">
+            <div class="w-16 mx-4"> MESSAGE</div>
+            <!-- <input class="w-16   h-20 sm:w-10/12 border-2 border-yellow-600 w-7/12" type="text" placeholder=""> -->
+
+            <textarea rows="2" placeholder="留言..." cols="20"
+              class=" px-2 h-20  sm:w-[596px] border-2 border-yellow-600 w-8/12" name="message"></textarea>
+
+          </div>
+
+          <div class="h-16  col-span-2  flex flex-wrap  items-center  justify-end  sm:justify-center cursor-pointer">
+            <input id="send" type="submit"
+              class="w-20 mx-4 h-8  mb-[30px]  bg-yellow-600 text-white text-center mr-6  cursor-pointer" value="send">
+          </div>
+
         </div>
-
-
-
-        <div class="h-16  col-span-2 sm:col-span-1 flex flex-wrap text-center items-center  justify-start">
-          <label for="phone" class="w-16 mx-4"> PHONE</label>
-          <input class="w-48  h-8 border-b-2 border-yellow-600  " type="text" placeholder="" maxlength="10" name="phone"
-            id="phone">
-        </div>
-        <div class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start  sm:w-full">
-          <label for="email" class="w-16 mx-4 "> EMAIL</label>
-          <input class="w-48  h-8 sm:w-[192px] border-b-2 border-yellow-600" type="text" placeholder="" id="email"
-            name="email">
-        </div>
-
-
-
-        <div
-          class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full relative">
-          <label class="w-16 mx-4  sm:float-right"> PRODUCT
-          </label>
-
-
-          <select name="product" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2" id="product">
-            <option value="" selected disabled>請選擇欲購買商品</option>
-            <option value="0">DUGOUT Album CD</option>
-            <option value="1">DUGOUT Album TEE</option>
-            <option value="2">DUGOUT Album BUNDLE</option>
-          </select>
-          <p class="italic absolute bottom-[-16px] sm:bottom-[-8px] right-[30px] text-gray-500">請耐心等候3-5個工作天。</p>
-        </div>
-
-
-
-
-        <div
-          class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center mt-4 justify-start w-full relative hidden"
-          id="size-field">
-          <label class="w-16 mx-4  sm:float-right">SIZE
-          </label>
-
-
-          <select id="size" name="size" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2 ">
-            <option value="" selected disabled>請選擇尺寸</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-        </div>
-
-
-
-
-        <div
-          class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full relative hidden"
-          id="quantity-field">
-          <label class="w-16 mx-4  sm:float-right">QUANTITY
-          </label>
-          <select id="quantity" name="quantity" class="w-48 h-8  sm:w-10/12 border-2 border-yellow-600  px-2 ">
-            <option value="" selected disabled>請選擇數量</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-          
-        </div>
-
-
-        <div class="h-16  col-span-2 sm:col-span-2 flex flex-wrap text-center items-center  justify-start  sm:mt-0">
-          <label class="w-16 mx-4  sm:float-right">DELIVERY
-          </label>
-        </div>
-
-        <div class="h-8  col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start ml-[75px]  sm:mt-0">
-
-          <input class="ml-5  " type="radio" name="delivery" value="0" id="ftf" name="ftf" checked>
-          <label for="ftf" class="w-10  mx-3 "> 面交</label>
-          <div class=" ">南京三民2號出口</div>
-        </div>
-        <div
-          class="h-8  col-span-2 sm:col-span-1 flex flex-wrap  items-center  justify-start ml-[75px] sm:ml-0 relative">
-          <input class="ml-5" type="radio" name="delivery" id="sts" value="60">
-          <label for="sts" class="w-10 mx-3 "> 711</label>
-          <input type="text" class="px-2 h-8  border-b-2 border-yellow-600  w-[120px]" placeholder="店到店門市" name="sts">
-
-        </div>
-
-  
-        <hr class="col-span-2 mt-6" width="100%">
-
-        <div id="sub-total-label"
-          class="h-4  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm text-gray-500 mt-2 hidden">
-
-          <div class="w-[80px]   "> SUBTOTAL</div>
-          <div class=" w-[130px]     text-right ">$ <span class="w-[50px] inline-block" id="subTotal">0</span> </div>
-        </div>
-        <div id="shipping-label"
-          class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px] text-sm   text-gray-500 hidden">
-
-          <div class="w-[80px] "> SHIPPING</div>
-          <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="shipping">0</span> </div>
-        </div>
-
-        <div id="total-label"
-          class="h-8  col-span-2  flex flex-wrap flex-col items-center text-right justify-start ml-[75px]  sm:mt-0 hidden">
-
-          <div class="w-[80px]  ">TOTAL</div>
-          <div class="  w-[130px]     text-right">$ <span class="w-[50px] inline-block" id="total">0</span> </div>
-        </div>
-
-
-
-
-        <div class="h-32  col-span-2 flex flex-wrap text-center items-center  justify-start">
-          <div class="w-16 mx-4"> MESSAGE</div>
-          <!-- <input class="w-16   h-20 sm:w-10/12 border-2 border-yellow-600 w-7/12" type="text" placeholder=""> -->
-
-          <textarea rows="2" placeholder="留言..." cols="20"
-            class=" px-2 h-20 sm:w-10/12 border-2 border-yellow-600 w-8/12" name="message"></textarea>
-
-        </div>
-
-        <div class="h-16  col-span-2  flex flex-wrap  items-center  justify-end  sm:justify-center cursor-pointer">
-          <input id="send" class="w-20 mx-4 h-8  mb-[30px]  bg-yellow-600 text-white text-center mr-6  cursor-pointer"
-            value="send">
-        </div>
-
-      </div>
+      </form>
     </div>
   </section>
 

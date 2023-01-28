@@ -579,6 +579,14 @@ video {
   bottom: 0px;
 }
 
+.right-\[72px\] {
+  right: 72px;
+}
+
+.right-\[14px\] {
+  right: 14px;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -701,8 +709,8 @@ video {
   margin-left: 1.25rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .mb-\[30px\] {
@@ -777,10 +785,6 @@ video {
   height: 60px;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .h-16 {
   height: 4rem;
 }
@@ -849,16 +853,16 @@ video {
   width: 4rem;
 }
 
-.w-48 {
-  width: 12rem;
+.w-52 {
+  width: 13rem;
 }
 
 .w-10 {
   width: 2.5rem;
 }
 
-.w-\[120px\] {
-  width: 120px;
+.w-\[125px\] {
+  width: 125px;
 }
 
 .w-\[80px\] {
@@ -867,10 +871,6 @@ video {
 
 .w-\[130px\] {
   width: 130px;
-}
-
-.w-\[53px\] {
-  width: 53px;
 }
 
 .w-\[50px\] {
@@ -891,6 +891,10 @@ video {
 
 .w-\[2000px\] {
   width: 2000px;
+}
+
+.w-\[100px\] {
+  width: 100px;
 }
 
 .max-w-3xl {
@@ -1094,8 +1098,8 @@ video {
 }
 
 .news_marquee {
-  animation : slide 7s linear infinite ;
-  color:white;
+  animation: slide 7s linear infinite;
+  color: white;
 }
 
 @keyframes slide {
@@ -1105,6 +1109,33 @@ video {
 
   100% {
     transform: translatex(100%)
+  }
+}
+
+label.error {
+  color: red;
+  width: 200px;
+  text-align: right;
+  margin-left: 103px;
+}
+
+#sts-error {
+  margin-left: 195px;
+}
+
+@media (min-width: 640px){
+  /* #email-error{} */
+
+  input.error ,input.error:focus,select.error{
+    border-width: 2px;
+    border-color: red;
+  }
+
+  label.error {
+    color: red;
+    width: 36px;
+    text-align: right;
+    margin-left: 0px;
   }
 }
 
@@ -1155,6 +1186,10 @@ video {
     bottom: -8px;
   }
 
+  .sm\:right-\[72px\] {
+    right: 72px;
+  }
+
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1193,10 +1228,6 @@ video {
 
   .sm\:mt-0 {
     margin-top: 0px;
-  }
-
-  .sm\:ml-0 {
-    margin-left: 0px;
   }
 
   .sm\:flex {
@@ -1263,6 +1294,30 @@ video {
     width: 83.333333%;
   }
 
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:w-\[10\/12\] {
+    width: 10/12;
+  }
+
+  .sm\:w-\[596px\] {
+    width: 596px;
+  }
+
+  .sm\:w-\[5\] {
+    width: 5;
+  }
+
+  .sm\:w-\[208px\] {
+    width: 208px;
+  }
+
+  .sm\:w-\[195px\] {
+    width: 195px;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1281,6 +1336,10 @@ video {
 
   .sm\:justify-center {
     justify-content: center;
+  }
+
+  .sm\:justify-around {
+    justify-content: space-around;
   }
 
   .sm\:gap-4 {

@@ -571,20 +571,12 @@ video {
   bottom: -16px;
 }
 
-.right-\[30px\] {
-  right: 30px;
+.right-\[14px\] {
+  right: 14px;
 }
 
 .bottom-0 {
   bottom: 0px;
-}
-
-.right-\[72px\] {
-  right: 72px;
-}
-
-.right-\[14px\] {
-  right: 14px;
 }
 
 .z-20 {
@@ -773,16 +765,8 @@ video {
   height: 42px;
 }
 
-.h-\[39px\] {
-  height: 39px;
-}
-
 .h-\[200px\] {
   height: 200px;
-}
-
-.h-\[60px\] {
-  height: 60px;
 }
 
 .h-16 {
@@ -837,8 +821,8 @@ video {
   width: 24rem;
 }
 
-.w-32 {
-  width: 8rem;
+.w-\[100px\] {
+  width: 100px;
 }
 
 .w-1\/2 {
@@ -877,10 +861,6 @@ video {
   width: 50px;
 }
 
-.w-7\/12 {
-  width: 58.333333%;
-}
-
 .w-8\/12 {
   width: 66.666667%;
 }
@@ -891,10 +871,6 @@ video {
 
 .w-\[2000px\] {
   width: 2000px;
-}
-
-.w-\[100px\] {
-  width: 100px;
 }
 
 .max-w-3xl {
@@ -1123,19 +1099,29 @@ label.error {
   margin-left: 195px;
 }
 
-@media (min-width: 640px){
-  /* #email-error{} */
-
-  input.error ,input.error:focus,select.error{
+@media (min-width: 640px) {
+  input.error,
+    input.error:focus,
+    select.error {
     border-width: 2px;
     border-color: red;
   }
 
+  #product-error,#size-error,#quantity-error{
+    left: 416px;
+  }
+
   label.error {
     color: red;
-    width: 36px;
-    text-align: right;
-    margin-left: 0px;
+    position: absolute;
+    width: 150px;
+    left: 45px;
+  }
+
+  #sts-error {
+    height: 32px;
+    margin-left: 27px;
+    line-height: 32px;
   }
 }
 
@@ -1182,10 +1168,6 @@ label.error {
     top: 10rem;
   }
 
-  .sm\:bottom-\[-8px\] {
-    bottom: -8px;
-  }
-
   .sm\:right-\[72px\] {
     right: 72px;
   }
@@ -1208,14 +1190,6 @@ label.error {
 
   .sm\:mt-10 {
     margin-top: 2.5rem;
-  }
-
-  .sm\:mt-\[-3px\] {
-    margin-top: -3px;
-  }
-
-  .sm\:ml-\[-4px\] {
-    margin-left: -4px;
   }
 
   .sm\:-ml-0\.5 {
@@ -1270,12 +1244,8 @@ label.error {
     width: 600px;
   }
 
-  .sm\:w-\[220px\] {
-    width: 220px;
-  }
-
-  .sm\:w-\[111px\] {
-    width: 111px;
+  .sm\:w-\[195px\] {
+    width: 195px;
   }
 
   .sm\:w-56 {
@@ -1286,36 +1256,16 @@ label.error {
     width: 400px;
   }
 
-  .sm\:w-\[192px\] {
-    width: 192px;
-  }
-
-  .sm\:w-10\/12 {
-    width: 83.333333%;
-  }
-
-  .sm\:w-1\/2 {
-    width: 50%;
-  }
-
-  .sm\:w-\[10\/12\] {
-    width: 10/12;
+  .sm\:w-\[208px\] {
+    width: 208px;
   }
 
   .sm\:w-\[596px\] {
     width: 596px;
   }
 
-  .sm\:w-\[5\] {
-    width: 5;
-  }
-
-  .sm\:w-\[208px\] {
-    width: 208px;
-  }
-
-  .sm\:w-\[195px\] {
-    width: 195px;
+  .sm\:w-1\/2 {
+    width: 50%;
   }
 
   .sm\:grid-cols-2 {

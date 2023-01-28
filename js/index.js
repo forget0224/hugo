@@ -329,7 +329,7 @@ function postSheet() {
             if (response == "成功") {
 
                 sendMail()
-                alert("訂購成功，訂單編號為" + getTime().order_number + "訂購資訊以寄送到您的信箱。");
+                alert("訂購資訊已寄送到您的信箱。"+"訂單編號:" + getTime().order_number);
 
             }
             $("input[name=name]").val("");

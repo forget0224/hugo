@@ -1,18 +1,50 @@
-@tailwind base; 
-@tailwind components; 
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 .news_marquee {
-    animation : slide 7s linear infinite ;
-    color:white;
+    animation: slide 7s linear infinite;
+    color: white;
 }
 
 @keyframes slide {
     0% {
-    transform: translatex(0%)
+        transform: translatex(0%)
     }
 
     100% {
-    transform: translatex(100%)
+        transform: translatex(100%)
     }
+}
+
+label.error {
+    color: red;
+    width: 200px;
+    text-align: right;
+    margin-left: 103px;
+}
+
+#sts-error {
+    margin-left: 195px;
+}
+
+@media (min-width: 640px) {
+    input.error,
+    input.error:focus,
+    select.error {
+        border-width: 2px;
+        border-color: red;
     }
+#product-error,#size-error,#quantity-error{left: 416px;}
+    label.error {
+        color: red;
+        position: absolute;
+        width: 150px;
+        left: 45px;
+    }
+    #sts-error {
+     height: 32px;
+        margin-left: 27px;
+        line-height: 32px;
+    }
+}

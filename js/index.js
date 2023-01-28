@@ -139,7 +139,7 @@ function changeProduct() {
 
 function switchProduct() {
     $('#quantity-field').removeClass('hidden')
-    if ($('#product').val() === '0') {
+    if ($('#product').val() === '1') {
         $('#size-field').addClass('hidden')
     } else {
         $('#size-field').removeClass('hidden')

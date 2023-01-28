@@ -38,8 +38,6 @@ $('nav a').click(function () {
 });
 
 
-
-
 $(document).ready(function () {
     $('.banner').slick({
         slidesToShow: 4,
@@ -93,15 +91,9 @@ $(document).ready(function () {
         }]
     });
 
-
-
     checkInput()
 
-
-
-
 });
-
 
 const linkBtn = document.querySelectorAll("div.linkBtn").length;
 for (let i = 0; linkBtn > i; i++) {
@@ -135,53 +127,6 @@ window.onscroll = () => {
 };
 
 
-
-
-
-// const productSelect = $('#product');
-// const sizeSelect = $('#size');
-// const quantitySelect = document.getElementById('quantity');
-// const optSize=sizeSelect.getElementsByTagName("option")
-// const optQuan=quantitySelect.getElementsByTagName("option")
-
-// orderSelect.addEventListener('change', (e) => {
-//   switch (e.target.value) {
-//     case 'DUGOUT Album tee': {
-
-//         sizeSelect.classList.remove('hidden');
-//         // sizeSelect.classList.add('block');
-//         quantitySelect.classList.remove('hidden');
-//         // quantitySelect.classList.add('block');
-//         optSize[0].selected=true;
-//         optQuan[0].selected=true;
-//       break;
-//     }
-//     case 'DUGOUT Album cd': {
-//         // sizeSelect.classList.remove('block');
-//         sizeSelect.classList.add('hidden');
-//         quantitySelect.classList.remove('hidden');
-//         // quantitySelect.classList.add('block');
-//         optQuan[0].selected=true;
-//       break;
-//     }
-//     case 'DUGOUT Album bundle': {
-//         sizeSelect.classList.remove('hidden');
-//         // sizeSelect.classList.add('block');
-//         quantitySelect.classList.remove('hidden');
-//         // quantitySelect.classList.add('block');
-//         optSize[0].selected=true;
-//         optQuan[0].selected=true;
-//       break;
-//     }
-//     // default: {
-//     //      sizeSelect;
-//     //     quantitySelect;
-
-//     //   break;
-//     // }  
-//   }
-// });
-
 $('#product').change(changeProduct)
 $('#quantity').change(processTotal)
 $('input[type=radio][name=delivery]').change(processTotal)
@@ -207,15 +152,15 @@ function resetParameter() {
 }
 
 const PRODUCT_LIST = {
-    '0': {
+    '1': {
         name: 'DUGOUT Album CD',
         price: 500
     },
-    '1': {
+    '2': {
         name: 'DUGOUT Album TEE',
         price: 900
     },
-    '2': {
+    '3': {
         name: 'DUGOUT Album BUNDLE',
         price: 1100
     }
@@ -234,67 +179,6 @@ function processTotal() {
     shipping ? $('#shipping-label').removeClass('hidden') : $('#shipping-label').addClass('hidden')
     total ? $('#total-label').removeClass('hidden') : $('#total-label').addClass('hidden')
 }
-
-
-
-// function checkInput(){
-//     var name, phone, email, order, store, sts, size, quantity
-//     name = $("input[name=name]").val()
-//     phone = $("input[name=phone]").val()
-//     email = $("input[name=email]").val()
-//     order = $("#product").val()
-//     store = $("input[name=sts]").val()
-//     size = $("input[name=size]").val()
-//     quantity = $("input[name=quantity]").val()
-//     var sts = $("input[id=sts]:checked").length
-//     var check = $("input[name='delivery']:checked").length; //判斷有多少個方框被勾選
-//     var MobileReg = /^(09)[0-9]{8}$/;
-//     var emailReg = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-//     // (str.match(MobileReg)) ? true : false
-//     if (!name) {
-//         alert("姓名不能為空");
-//         $('input[name=name]').focus();
-//         return false;
-//     } else if (!phone) {
-//         alert("手機不能為空");
-//         $('input[name=phone]').focus();
-//         return false;
-//     } else if (phone.length < 10) {
-//         alert("手機不能小於10位!");
-//         $('input[name=phone]').focus();
-//         return false;
-//     } else if (!order) {
-//         if (!order) {
-//             alert("購買項目不能為空");
-//             $('select[name=order]').focus();
-//             return false;
-//         }
-//     } else if (check == 0) {
-//         alert("寄送方式請擇一");
-//         return false; //不要提交表單
-//     } else if (sts == 1 & !store) {
-//         alert("店到店門市不能為空");
-//         $('input[name=sts]').focus();
-//         return false;
-//     } 
-//     else if (phone.test(MobileReg)) {
-//         alert("請輸入正確手機格式");
-//         $('input[name=phone]').focus();
-//         return false;
-//     } else if (email.test(emailReg) = false) {
-//         alert("請輸入正確email格式");
-//         $('input[name=email]').focus();
-//         return false;
-//     }
-
-
-//     // if(phone.match(MobileReg)){}else{alert("請輸入正確email格式");$('input[name=email]').focus();return false}
-//     //     phone.match(MobileReg) ? true : false;alert("請輸入正確手機格式");$('input[name=phone]').focus();
-//     //     email.match(emailReg) ? true : false;alert("請輸入正確email格式");$('input[name=email]').focus();
-
-// }
-
-
 
 function checkInput() {
     $('#myForm').validate({
@@ -337,7 +221,7 @@ function checkInput() {
             quantity: {
                 required: true
             },
-          
+
             sts: {
                 required: "#sts:checked"
             },
@@ -376,28 +260,25 @@ function checkInput() {
             return false
         }
     });
-const stsCheck = $("input[id='sts']");
-const deliveryCheck = $('input[name=delivery]');
-const stsName = $("input[name=sts]")
+    const stsCheck = $("input[id='sts']");
+    const deliveryCheck = $('input[name=delivery]');
+    const stsName = $("input[name=sts]")
 
-deliveryCheck.click(function () {
+    deliveryCheck.click(function () {
 
-    if (stsCheck.is(":checked")) {
-        stsName.prop("disabled", false)
+        if (stsCheck.is(":checked")) {
+            stsName.prop("disabled", false)
+        } else {
+            stsName.prop("disabled", true)
+        }
 
-    } else {
-        stsName.prop("disabled", true)
-    }
-
-
-})
+    })
 
 
 }
 
 document.querySelector('#myForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('submit');
 });
 
 
@@ -443,12 +324,46 @@ function postSheet() {
             "order_total": $("#total").text(),
             "order_message": $("textarea[name=message]").val()
         },
+
         success: function (response) {
             if (response == "成功") {
-                alert("訂購成功，訂單編號為" + getTime().order_number);
+
+                sendMail()
+                alert("訂購成功，訂單編號為" + getTime().order_number + "訂購資訊以寄送到您的信箱。");
+
             }
-            window.location.reload();
+            $("input[name=name]").val("");
+            $("input[name=phone]").val("");
+            $("input[name=email]").val("");
+            $("select[name=product]").val("0")
+            $("textarea[name=message]").val("");
+            changeProduct()
+
         }
     });
 
+
+
+}
+
+
+function sendMail() {
+    var data = {
+        "order_time": getTime().order_time,
+        "order_number": getTime().order_number,
+        "order_name": $("input[name=name]").val(),
+        "order_phone": $("input[name=phone]").val(),
+        "order_email": $("input[name=email]").val(),
+        "order_order": PRODUCT_LIST[$('#product').val()].name,
+        "order_size": $("select[name=size]").val(),
+        "order_quantity": $("select[name=quantity]").val(),
+        "order_ftf": $("[id='ftf']:checked + label").text(),
+        "order_sts": $("input[name=sts]").val(),
+        "order_total": $("#total").text(),
+        "order_message": $("textarea[name=message]").val()
+    }
+
+    const serviceID = "service_0hu3zy5";
+    const templateID = "template_hpe1cza"
+    emailjs.send(serviceID, templateID, data)
 }

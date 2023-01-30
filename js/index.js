@@ -118,10 +118,10 @@ window.onscroll = () => {
     });
 
     navList.forEach((li) => {
-        li.classList.remove("text-yellow-600");
+        li.classList.remove("text-[#fd661f]");
         if (li.classList.contains(current)) {
 
-            li.classList.add("text-yellow-600");
+            li.classList.add("text-[#fd661f]");
         }
     });
 };

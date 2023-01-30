@@ -27,51 +27,51 @@
 
 <body class="font-mono">
 
-  <nav class="py-4 bg-black nav w-full z-20 fixed shadow-lg">
+  <nav class="py-4 bg-white/75 nav w-full z-20 fixed shadow-lg ">
     <div
-      class="container mx-auto flex sm:justify-end  sm:items-baseline flex-row sm:flex-row justify-center text-white ">
+      class="container mx-auto flex sm:justify-end  sm:items-baseline flex-row sm:flex-row justify-center  ">
 
       <ul class="flex text-ul font-mono sm:text-2xl hidden sm:flex">
-        <li class="sm:mr-10 mr-4 home text-yellow-600">
+        <li class="sm:mr-10 mr-4 Home text-[#fd661f]">
 
-          <a href="#home">home</a></li>
-        <li class="sm:mr-10 mr-4 music"><a href="#music">music</a></li>
-        <li class="sm:mr-10 mr-4 shirt"> <a href="#shirt">t-shirt</a></li>
-        <li class="sm:mr-10 mr-4 video"> <a href="#video">video</a> </li>
-        <li class="sm:mr-10 mr-4 stream"> <a href="#stream">stream</a> </li>
-        <li class="sm:mr-10 mr-4 order"><a href="#order">order</a></li>
+          <a href="#Home">Home</a></li>
+        <li class="sm:mr-10 mr-4 Music"><a href="#Music">Music</a></li>
+        <li class="sm:mr-10 mr-4 Shirt"> <a href="#Shirt">T-shirt</a></li>
+        <li class="sm:mr-10 mr-4 Video"> <a href="#Video">Video</a> </li>
+        <li class="sm:mr-10 mr-4 Stream"> <a href="#Stream">Stream</a> </li>
+        <li class="sm:mr-10 mr-4 Order"><a href="#Order">Order</a></li>
       </ul>
 
 
 
       <ul class="flex text-ul font-mono sm:hidden ">
-        <li class=" mr-64"><a href="#home"><img src="/images/home.jpg" alt="" class="h-8 rounded-full"></a></li>
-        <li class="menuBtn w-1"><i class="fa-solid fa-bars my-2 text-xl"></i></li>
-        <li class="closeMenu hidden w-1"><i class="fa-solid fa-xmark my-2 text-xl"></i></li>
+        <li class=" mr-64"><a href="#Home"><img src="/images/home.jpg" alt="" class="h-8 rounded-full"></a></li>
+        <li class="menuBtn w-1"><i class="fa-solid fa-bars my-2 text-xl  text-yellow-600"></i></li>
+        <li class="closeMenu hidden w-1"><i class="fa-solid fa-xmark my-2 text-xl text-yellow-600"></i></li>
 
       </ul>
 
 
     </div>
-    <div class="menu  h-full w-64 bg-black float-right fixed top-0 -right-64 z-10  sm:hidden duration-700 mt-10">
+    <div class="menu  h-full w-64 bg-white float-right fixed top-0 -right-64   sm:hidden duration-700  z-[-1]">
 
-      <ul class="flex text-ul font-mono flex-col items-center mt-8 text-white ">
-        <li class="py-2 mr-4"><a href="#home">home</a></li>
-        <li class="py-2 mr-4"><a href="#music">music</a></li>
-        <li class="py-2 mr-4"> <a href="#shirt">t-shirt</a></li>
-        <li class="py-2 mr-4"> <a href="#video">video</a> </li>
-        <li class="py-2 mr-4"> <a href="#stream">stream</a> </li>
-        <li class="py-2 mr-4"><a href="#order">order</a></li>
+      <ul class="flex text-ul font-mono flex-col items-center  text-yellow-600  pt-10">
+        <li class="py-2 mr-4"><a href="#Home">Home</a></li>
+        <li class="py-2 mr-4"><a href="#Music">Music</a></li>
+        <li class="py-2 mr-4"> <a href="#Shirt">T-shirt</a></li>
+        <li class="py-2 mr-4"> <a href="#Video">Video</a> </li>
+        <li class="py-2 mr-4"> <a href="#Stream">Stream</a> </li>
+        <li class="py-2 mr-4"><a href="#Order">Order</a></li>
         <!-- <li class="py-2 mr-4  closeMenu duration-700"><i class="fa-solid fa-xmark "></i></li> -->
 
       </ul>
     </div>
   </nav>
 
-  <section class=" pt-32 h-screen " id="home">
+  <section class=" pt-32 h-screen " id="Home">
     <div class="container mx-auto sm:h-screen h-96 relative">
 
-      <div class="px-2 absolute sm:top-40 w-full ">
+      <div class="px-2 absolute  w-full mt-[90px] sm:mt-0">
 
         <div class="flex flex-row -mx-2  banner z-0">
           <div class="w-full sm:w-2/12 px-2 flex flex-row items-center   z-0">
@@ -116,9 +116,9 @@
       </div>
     </div>
   </section>
-  <section class="py-10 bg-white sm:mt-10" id="music">
+  <section class="py-10 bg-white sm:mt-10" id="Music">
     <div class="container mx-auto sm:h-full h-full max-w-3xl">
-      <h1 class="p-6 text-black text-4xl text-center">DUGOUT</h1>
+      <h2 class="p-6 text-black text-3xl text-center">DUGOUT</h2>
 
       <div class="flex flex-col ">
         <div class="sm:w-[600px]  sm:h-[600px] w-[300px]  h-[300px] flex flex-col items-center mx-auto">
@@ -130,7 +130,7 @@
         </div>
 
         <div class="w-80 sm:w-[600px]  flex flex-col text-center mx-auto mt-8">
-          <div class="rounded  sm:w-full w-full mt-8  h-full  border-2 border-black  text-center mx-auto">
+          <div class="rounded  sm:w-full w-full mt-8  h-full   text-center mx-auto">
             <!-- <h2 class="ml-4 mt-2">專輯介紹 ABOUT</h2>
             <p class="ml-8 leading-loose mx-4  ">
               DUGOUT
@@ -140,7 +140,7 @@
 
 
 
-            <table class="w-60  mt-2 mx-auto text-center">
+            <table class="w-60  mt-2 mx-auto text-center text-sm">
               <tbody>
 
                 <tr>
@@ -191,8 +191,8 @@
             </table>
 
             <h2 class="mt-2 font-bold">DETAIL</h2>
-            <p class="ml-8 leading-loose mx-4  mb-2 whitespace-nowrap">
-              實體專輯cd、封面小海報、紀念貼紙。
+            <p class="ml-8 leading-loose mx-4  mb-2 whitespace-nowrap italic text-sm">
+              CD & POSTER & STICKER。
             </p>
 
           </div>
@@ -233,9 +233,9 @@
       </div>
     </div>
   </section>
-  <section class="py-10 bg-white sm:mt-10" id="shirt">
+  <section class="py-10 bg-white sm:mt-10" id="Shirt">
     <div class="container mx-auto sm:h-full h-full max-w-3xl">
-      <h1 class="p-6 text-black text-4xl text-center">album tee</h1>
+      <h2 class="p-6 text-black text-3xl text-center">Album tee</h2>
 
       <div class="flex flex-col ">
         <div class="sm:w-[600px]  sm:h-[600px]  w-[300px] h-[300px] flex flex-col items-center mx-auto ">
@@ -248,7 +248,7 @@
         </div>
 
         <div class="w-80 sm:w-[600px]  flex flex-col  mx-auto mt-8">
-          <div class="rounded  sm:w-full w-full mt-8  h-full  border-2 border-black  text-center mx-auto">
+          <div class="rounded  sm:w-full w-full mt-8  h-full    text-center mx-auto">
             <table class="w-60  mt-2 mb-2 mx-auto text-left">
               <tbody>
                 <tr>
@@ -317,16 +317,16 @@
     </div>
   </section>
   
-  <section class="py-10 sm:mt-10" id="video">
+  <section class="py-10 sm:mt-10" id="Video">
     <div class="container mx-auto sm:h-full h-full max-w-3xl">
-      <h1 class="p-6  text-4xl text-center">video</h1>
+      <h2 class="p-6  text-3xl text-center">Video</h2>
       <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
         <div class="rounded  w-full mt-4 h-full ">
 
 
           <!-- <iframe src="https://www.youtube.com/watch?v=cStZQbnHbiE" width="640" height="480" allow="autoplay"></iframe> -->
           <!-- <iframe src="https://drive.google.com/file/d/1uxL2CFJaKa1-7WhRAJ4ZqZ9Mq9PBm-LP/preview" width="640" height="480" allow="autoplay"></iframe> -->
-          <img src="./images/IMG_1516.PNG" alt="" class="sm:h-[400px] sm:w-[400px] h-[200px] w-[200px] mx-auto">
+          <img src="./images/IMG_1516.PNG" alt="" class="sm:h-[400px] sm:w-[400px] h-[300px] w-[300px] mx-auto">
 
         </div>
       </div>
@@ -355,7 +355,7 @@
       </div>
       <div class="w-80 sm:w-full  flex flex-col items-center mx-auto">
         <div class="rounded  w-full mt-8 h-full ">
-          <img src="./images/IMG_1696.PNG" alt="" class="sm:h-[400px] sm:w-[400px] h-[200px] w-[200px] mx-auto">
+          <img src="./images/IMG_1696.PNG" alt="" class="sm:h-[400px] sm:w-[400px] h-[300px] w-[300px] mx-auto">
         </div>
       </div>
       <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-4 mx-auto">
@@ -382,7 +382,7 @@
       </div>
       <div class="w-80 sm:w-full  flex flex-col items-center mx-auto ">
         <div class="rounded  w-full  mt-8 h-full ">
-          <img src="./images/allweneed.PNG" alt="" class="sm:h-[400px] sm:w-[400px] h-[200px] w-[200px] mx-auto">
+          <img src="./images/allweneed.PNG" alt="" class="sm:h-[400px] sm:w-[400px] h-[300px] w-[300px] mx-auto">
         </div>
       </div>
       <div class="w-96 sm:w-full  flex flex-row items-center justify-center mt-4 mx-auto">
@@ -410,18 +410,18 @@
     </div>
   </section>
 
-  <section class="py-10 sm:mt-10" id="stream">
+  <section class="py-10 sm:mt-10" id="Stream">
     <div class="container mx-auto sm:h-full h-full max-w-3xl">
-      <h1 class="p-6  text-4xl text-center">stream</h1>
+      <h2 class="p-6  text-3xl text-center">Stream</h2>
       <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450"
         style="overflow:hidden;background:transparent;"
         sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
         src="https://embed.music.apple.com/tw/album/dugout/1645938742" class="sm:w-full mx-auto"></iframe>
     </div>
   </section>
-  <section class="py-10 sm:mt-10" id="order">
+  <section class="py-10 sm:mt-10" id="Order">
     <div class="container mx-auto sm:h-screen h-screen max-w-3xl">
-      <h1 class="p-6 text-black text-4xl text-center">order</h1>
+      <h2 class="p-6 text-black text-3xl text-center">Order</h2>
 
       <form action="" id="myForm" method="post">
         <div class="w-80 sm:w-full  grid  sm:grid-cols-2  sm:gap-4 sm:gap-2  mx-auto sm:mt-10 ">
@@ -472,7 +472,7 @@
           <fieldset
             class="h-16  sm:col-span-2 col-span-2 flex flex-wrap text-center items-center  justify-start w-full relative hidden"
             id="quantity-field">
-            <label class="w-16 mx-4  sm:float-right">QUANTITY
+            <label class="w-16 mx-4 tracking-tight sm:float-right">QUANTITY
             </label>
             <select id="quantity" name="quantity" class="w-52 h-8   sm:w-[596px] border-2 border-yellow-600  px-2 ">
               <option value="" selected disabled>請選擇數量</option>
@@ -538,7 +538,7 @@
       </form>
     </div>
   </section>
-  <footer class="h-[30px] bg-black  w-full fixed  bottom-0 shadow-lg text-white flex">
+  <footer class="h-[30px] bg-[#fd661f]  w-full fixed  bottom-0 shadow-lg text-white flex z-20">
     <div class="news_marquee w-[2000px]"> Hupe softman</div>
 </footer>
 

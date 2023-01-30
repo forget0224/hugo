@@ -797,6 +797,10 @@ video {
   height: 30px;
 }
 
+.h-\[200px\] {
+  height: 200px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -984,6 +988,34 @@ video {
   background-color: rgb(253 102 31 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\] {
+  background-image: url('/img/hero-pattern.svg');
+}
+
+.bg-\[url\(\'\.\/\'\)\] {
+  background-image: url('./');
+}
+
+.bg-\[url\(\'\.\/images\'\)\] {
+  background-image: url('./images');
+}
+
+.bg-\[url\(\'\.\/images\/\'\)\] {
+  background-image: url('./images/');
+}
+
+.bg-\[url\(\'\.\/images\/bg1\.jpeg\'\)\] {
+  background-image: url('./images/bg1.jpeg');
+}
+
+.bg-\[url\(\'\.\/images\/bg1\.jpg\'\)\] {
+  background-image: url('./images/bg1.jpg');
+}
+
+.bg-\[url\(\'\/images\/bg1\.jpg\'\)\] {
+  background-image: url('/images/bg1.jpg');
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -1054,6 +1086,16 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -1341,6 +1383,11 @@ label.error {
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .sm\:text-yellow-300 {

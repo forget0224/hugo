@@ -182,17 +182,9 @@ function processTotal() {
 
 function checkInput() {
     $('#myForm').validate({
-        /* 常用檢測屬性
-       required:必填
-       noSpace:空白
-       minlength:最小長度
-       maxlength:最大長度
-       email:信箱格式
-       number:數字格式
-       url:網址格式https://www.minwt.com
-       */
+      
         onkeyup: function (element, event) {
-            //去除左側空白
+           
             var value = this.elementValue(element).replace(/^\s+/g, "");
             $(element).val(value);
         },
@@ -363,7 +355,7 @@ function sendMail() {
         "order_message": $("textarea[name=message]").val()
     }
 
-    const serviceID = "service_0hu3zy5";
+    const serviceID = "service_pv8klu9";
     const templateID = "template_hpe1cza"
     emailjs.send(serviceID, templateID, data)
 }
